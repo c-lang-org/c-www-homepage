@@ -49,9 +49,8 @@ a:hover {
   filter: brightness(1.3);
 }
 
-article {
+main {
   text-wrap: balance;
-  margin-bottom: 2em;
 }
 
 caption {
@@ -274,8 +273,8 @@ nav > #menu + label + div a {
   text-decoration: none;
 }
 
-nav > .singlepage {
-  display: none;
+nav a.current {
+  color: var(--color-nav-target);
 }
 
 
@@ -303,45 +302,6 @@ table.revisions td:not(:empty) {
 table.revisions td time {
   display: block;
   font-size: 0.7em;
-}
-
-
-@supports selector(article:target) {
-  article {
-    margin-top: -100%;
-    padding-top: 100%;
-  }
-
-  article:not(:target) {
-    display: none;
-  }
-
-  article:has(:target) {
-    display: block;
-  }
-
-  main:not(:has(:target)) article:first-of-type {
-    display: block;
-  }
-}
-
-@supports selector(body:has(article)) {
-  nav .singlepage {
-    display: initial;
-    font-size: 0.5em;
-  }
-
-  nav .singlepage input {
-    height: 0.5em;
-    vertical-align: middle;
-    margin: 0;
-  }
-
-  body:has(nav .singlepage :checked) article {
-    margin-top: initial;
-    padding-top: initial;
-    display: block;
-  }
 }
 
 
