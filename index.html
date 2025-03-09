@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>C language</title>
+  <meta name="description" content="The homepage of the C programming language">
+  <meta name="keywords" content="c,programming,language,lingua,franca">
+
+  <meta name="author" content="Jorenar">
+  <link rel="author" href="https://jorenar.com">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- might be helpful for some versions of IE -->
+  <script>document.createElement('x-cmt');</script>
+
+  <link rel="shortcut icon" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body:has(#home:target)      nav a[href="#home"],
+    body:has(#about:target)     nav a[href="#about"],
+    body:has(#community:target) nav a[href="#community"],
+    body:has(#resources:target) nav a[href="#resources"],
+    body:has(#tools:target)     nav a[href="#tools"],
+    body:has(#faq:target)       nav a[href="#faq"],
+    body:has(#contact:target)   nav a[href="#contact"]
+    {
+      color: var(--color-nav-target);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <header>
+      <a href="#home" title="The Standard C Programming Language">
+        <img width=30 src="logo.svg" alt="C">
+      </a>
+      <span>The lingua franca of programming</span>
+    </header>
+
+    <input id="menu" type="checkbox">
+    <label for="menu">&equiv;</label>
+    <div>
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#community">community</a>
+      <a href="#resources">resources</a>
+      <a href="#tools">tools</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">contact</a>
+    </div>
+
+    <!--
+      <label class="singlepage">
+      <input type="checkbox">single page
+      </label>
+    -->
+
+    <!-- <div class="copyleft"></div> -->
+  </nav>
+  <main>
+    <article id="home">
+      <h1>The C programming language</h1>
+      <p>
+      <strong>C</strong> is a general-purpose high-level programming language
+      suitable for <span class="nobr">low-level</span> programming, in other
+      words: <b>system programming language</b>.
+      </p>
+      <p>
+      It stands out in terms of portability, interoperability, efficiency, and stability.
+      </p>
+
+      <table class="revisions">
+        <caption>
+          Revisions of the C standard
+        </caption>
+        <tbody>
+          <tr> <!-- C23 -->
+            <td>C23</td>
+            <td>ISO/IEC 9899:2024</td>
+            <td>
+              <a href="https://www.iso.org/standard/82075.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/102886">IEC</a>
+              <time>2024-10-31</time>
+            </td>
+            <td>
+              <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf">N3220</a>
+              <time>2024-02-22</time>
+            </td>
+          </tr>
+          <tr> <!-- C17 -->
+            <td>C17</td>
+            <td>ISO/IEC 9899:2018</td>
+            <td>
+              <a href="https://www.iso.org/standard/74528.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/63478">IEC</a>
+              <time>2018-07-05</time>
+            </td>
+            <td>
+              <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2310.pdf">N2310</a>
+              <time>2018-11-11</time>
+            </td>
+          </tr>
+          <tr> <!-- C11 -->
+            <td>C11</td>
+            <td>ISO/IEC 9899:2011</td>
+            <td>
+              <a href="https://www.iso.org/standard/57853.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/11916">IEC</a>
+              <time>2011-12-08</time>
+            </td>
+            <td>
+              <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">N1570</a>
+              <time>2011-04-04</time>
+            </td>
+          </tr>
+          <tr> <!-- C99 -->
+            <td>C99</td>
+            <td>ISO/IEC 9899:1999</td>
+            <td>
+              <a href="https://www.iso.org/standard/29237.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/21714">IEC</a>
+              <time>1999-12-16</time>
+            </td>
+            <td title="C99 + TC1,TC2,TC3">
+              <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">N1256</a>
+              <time>2007-09-07</time>
+            </td>
+          </tr>
+          <tr> <!-- C95 -->
+            <td>C95</td>
+            <td>ISO/IEC 9899:1990<br><span style="float:right">/Amd 1:1995</span></td>
+            <td>
+              <a href="https://www.iso.org/standard/23909.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/21710">IEC</a>
+              <time>1995-03-30</time>
+            </td>
+          </tr>
+          <tr> <!-- C90 -->
+            <td>C90</td>
+            <td>ISO/IEC 9899:1990</td>
+            <td>
+              <a href="https://www.iso.org/standard/17782.html">ISO</a>
+              /
+              <a href="https://webstore.iec.ch/en/publication/21711">IEC</a>
+              <time>1990-12-20</time>
+            </td>
+          </tr>
+          <tr> <!-- C89 -->
+            <td>C89</td>
+            <td>ANSI X3.159-1989</td>
+          </tr>
+          <tr style="font-size: 0.65em"> <!-- K&R -->
+            <td>K&amp;R</td>
+            <td><i>The C Programming Language</i></td>
+          </tr>
+        </tbody>
+      </table>
+      <x-cmt style="display:block;margin:0.2em 0 0 0.3em">
+        See also:
+        <ul style="margin:-0.3em">
+          <li>
+            <a href="https://www.open-std.org/jtc1/sc22/wg14/www/projects.html#9899">analogous table</a>
+            on committee's website (includes also upcoming revision),
+          </li>
+          <li>
+            <i>revisions</i> section in <a href="#resources">resources</a>,
+            where we list additional references and documents.
+          </li>
+        </ul>
+      </x-cmt>
+    </article>
+    <article id="about">
+      <h2>About</h2>
+
+      <code style="display:block;white-space:pre;margin-left:1em;font-weight:bold">
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    puts("Hello World!");
+    return 0;
+}
+      </code>
+
+      <p>
+      C was designed by <a href="https://www.bell-labs.com/usr/dmr/www/">Dennis Ritchie</a>
+      during the early 1970s at <span class="nobr">Bell Labs</span> as an improvement
+      upon its interpreted predecessor: B language. After the release of Unix operating
+      system, and later also publication of the first edition of the bestseller book
+      <i>The C Programming Language</i>, authored by <a href="https://www.cs.princeton.edu/~bwk/">Brian Kernighan</a>
+      together with Ritchie (K&amp;R), C became one of the most widely used programming
+      languages in the world, with implementations for practically all architectures and systems.
+      </p>
+
+      <div class="yt-container">
+        <iframe
+          class="yt-video"
+          src="https://www.youtube-nocookie.com/embed/de2Hsvxaf8M"
+          title='"C" Programming Language: Brian Kernighan - Computerphile - YouTube'
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p>
+      You can learn more from materials listed in the <a href="#resources">resources</a>!
+      </p>
+
+      <h3>Standardization</h3>
+      <p style="text-wrap:initial">
+      The first standardization of the C language happened under
+      <a href="https://www.ansi.org/">American National Standards Institute</a>.
+      </p>
+      <p>
+      The current copyright holder of the C standard is
+      <a href="https://www.iso.org/">International Organization for Standardization</a> and the
+      <a href="https://www.open-std.org/jtc1/sc22/wg14/www/projects.html">work on the project</a>
+      is overseen by working group <b class="nobr">ISO/IEC JTC1/SC22/WG14</b>, commonly referred to as <i>C committee</i>.
+      </p>
+      <p style="text-align:initial">
+      The principles guiding the Committee in its efforts are outlined in the document
+      <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3280.htm">The C Standard charter</a>.
+      </p>
+      <p>
+      Visit <a href="https://www.open-std.org/jtc1/sc22/wg14/">the official
+        WG14 website</a> to learn more!
+      </p>
+    </article>
+    <article id="community">
+      <h2>Community</h2>
+      <dl>
+        <dt><a href="https://web.libera.chat/#c">#c on Libera.Chat</a></dt>
+        <dd>
+          IRC channel on <a href="https://libera.chat/">Libera.Chat</a>;
+          previously #c and ##c on Freenode.
+          <x-cmt style="display:block">visit <a href="https://www.iso-9899.info/wiki/Main_Page">wiki</a> for more details</x-cmt>
+        </dd>
+
+        <dt><a href="https://accu.org/">ACCU</a></dt>
+        <dd>
+          While nowadays its interests encompass a wide range of languages and
+          topics, previously it was known as <i>Association of C and C++ Users</i>.
+        </dd>
+
+        <dt><a href="https://cboard.cprogramming.com/c-programming/?daysprune=-1">C Board</a></dt>
+        <dd>
+          Forum accompanying <a href="https://cprogramming.com">Cprogramming.com</a> website.
+        </dd>
+
+        <dt><a href="http://www.hal9k.com/cug/">C/C++ Users Group</a></dt>
+        <dd>
+          A (now historical) group focused on low-cost distribution of
+          open-source C/C++ code. CUG also launched <i>C/C++ Users Journal</i>.
+          <br>
+          Some of their CD-ROMs can be found archived on
+          <a href="https://archive.org/search?query=%22C+Users+Group%22">Internet Archive</a>.
+        </dd>
+
+        <dt><a href="https://software.codidact.com/categories/38/tags/3296">Codidact</a></dt>
+        <dd>
+          Software development Q&amp;A platform with dedicated C tag.
+        </dd>
+
+        <dt><a href="https://ccodearchive.net/">Comprehensive C Archive Network</a></dt>
+        <dd>
+          Beside the repository itself, there are
+          <a href="https://lists.ozlabs.org/listinfo/ccan">mailing list</a>
+          and #ccan channel on Freenode.
+          <x-cmt>CCAN is inspired by Perl's CPAN</x-cmt>
+        </dd>
+
+        <dt><a href="https://dev.to/t/c">DEV Community</a></dt>
+        <dd>
+          Social network for software developers with dedicated C tag.
+        </dd>
+
+        <dt id="Discord">Discord</dt>
+        <dd>
+          This communicator has several servers dedicated to C language,
+          from publicly well known you can join:
+          <ul>
+            <li><a href="https://discord.gg/KydfXPfpYK">C Programming</a></li>
+            <li><a href="https://discord.gg/tccpp">Together C &amp; C++</a></li>
+          </ul>
+        </dd>
+
+        <dt><a href="https://news.ycombinator.com/">Hacker News</a></dt>
+        <dd>
+          A news aggregator focusing on computer science and entrepreneurship,
+          with articles and discussions about C programming appearing reasonably
+          frequently.
+        </dd>
+
+        <dt><a href="https://www.open-std.org/jtc1/sc22/wg14/">ISO/IEC JTC1/SC22/WG14</a></dt>
+        <dd>
+          The group of volunteers using their expertise to draft
+          new revisions of the C standard.
+        </dd>
+
+        <dt><a href="https://lobste.rs/t/c">Lobsters</a></dt>
+        <dd>
+          A link aggregation and discussion board with tag dedicated to C programming.
+          <x-cmt>posting only after an invite-only registration</x-cmt>
+        </dd>
+
+        <dt><a href="https://www.meetup.com/topics/c-programming-language/">Meetup</a></dt>
+        <dd>
+          This social networking platform for creating local groups and events
+          has a dedicated <i>C &amp; C++</i> topic tag.
+        </dd>
+
+        <dt>Reddit</dt>
+        <dd>
+          This social network platform hosts many programming communities,
+          including few dedicated to C language:
+          <ul>
+            <li><a href="https://www.reddit.com/r/C_Programming">r/C_Programming</a></li>
+            <li><a href="https://www.reddit.com/r/cprogramming/">r/cprogramming</a></li>
+            <li><a href="https://www.reddit.com/r/c_language/">r/c_language</a></li>
+            <li><a href="https://www.reddit.com/r/C_Homework">r/C_Homework</a></li>
+            <li><a href="https://www.reddit.com/r/Cprog">r/Cprog</a></li>
+          </ul>
+        </dd>
+
+        <dt><a href="https://stackoverflow.com/questions/tagged/c">Stack Overflow</a></dt>
+        <dd>
+          Popular software development Q&amp;A website with dedicated C tag.
+        </dd>
+
+        <dt><a href="https://en.wikipedia.org/wiki/Usenet_newsgroup">Usenet newsgroups</a></dt>
+        <dd>
+          There are prominent newsgroups about C language:
+          <ul>
+            <li><a href="news:comp.lang.c">comp.lang.c</a>
+              <x-cmt>
+                <a href="https://www.novabbs.com/devel/thread.php?group=comp.lang.c">novaBBS</a>,
+                <a href="https://www.rocksolidbbs.com/devel/thread.php?group=comp.lang.c">RetroBBS</a>,
+                <a href="https://groups.google.com/g/comp.lang.c">Google Groups</a>
+              </x-cmt>
+              <x-cmt style="display:block">see <a href="https://clc-wiki.net/wiki/Main_Page">clc-wiki</a> for more information</x-cmt>
+            </li>
+            <li><a href="news:comp.std.c">comp.std.c</a>
+              <x-cmt>
+                <a href="https://www.novabbs.com/devel/thread.php?group=comp.std.c">novaBBS</a>,
+                <a href="https://www.rocksolidbbs.com/devel/thread.php?group=comp.std.c">RetroBBS</a>,
+                <a href="https://groups.google.com/g/comp.std.c">Google Groups</a>
+              </x-cmt>
+            </li>
+            <li><a href="news:comp.lang.c.moderated">comp.lang.c.moderated</a>
+              <x-cmt>
+                <a href="https://groups.google.com/g/comp.lang.c.moderated">Google Groups</a>
+              </x-cmt>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>Worldwide users' groups</dt>
+        <dd>
+          After all, C is an <i>international</i> standard!
+          <ul>
+            <li>Brazil
+              <ul>
+                <li><a href="https://groups.google.com/g/ccppbrasil">ccppbrasil (C & C++ Brasil)</a></li>
+              </ul>
+            </li>
+            <li>Denmark
+              <ul>
+                <li><a href="https://www.meetup.com/Copenhagen-C-Meetup/">Copenhagen C/C++ Meetup</a></li>
+              </ul>
+            </li>
+            <li>Portugal
+              <ul>
+                <li><a href="https://www.meetup.com/lisbon-c-c-meetup-group/">Lisbon C/C++ Meetup Group</a></li>
+              </ul>
+            </li>
+            <li>United States of America
+              <ul>
+                <li><a href="https://www.meetup.com/TwinCities-C-Meetup/">Twin Cities C & C++ Meetup</a></li>
+              </ul>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </article>
+    <article id="resources" class="details-list">
+      <h2>Resources</h2>
+      <details> <!-- books -->
+        <summary>books</summary>
+        <ul>
+          <li class="book"> <!-- Beej's Guide to Network Programming -->
+            <i><a href="https://beej.us/guide/bgnet/">Beej's Guide to Network Programming</a></i>
+            ~ Brian "Beej Jorgensen" Hall
+          </li>
+          <li class="book"> <!-- C Programming: A Modern Approach -->
+            <i><a href="http://knking.com/books/c2/">C Programming: A Modern Approach</a></i>
+            ~ K. N. King
+          </li>
+          <li class="book"> <!-- C Programming FAQs: Frequently Asked Questions -->
+            <i><a href="https://c-faq.com/book/">C Programming FAQs: Frequently Asked Questions</a></i>
+            ~ Steve Summit
+          </li>
+          <li class="book"> <!-- Compiler Design in C -->
+            <i><a href="https://holub.com/compiler/">Compiler Design in C</a></i>
+            ~ Allen I. Holub
+          </li>
+          <li class="book"> <!-- Effective C -->
+            <i><a href="http://robertseacord.com/wp/">Effective C: An Introduction to Professional C Programming</a></i>
+            ~ Robert C. Seacord
+          </li>
+          <li class="book"> <!-- Modern C -->
+            <i><a href="https://gustedt.gitlabpages.inria.fr/modern-c/">Modern C</a></i>
+            ~ Jens Gustedt
+          </li>
+          <li class="book"> <!-- Secure Coding in C and C++ -->
+            <i><a href="https://insights.sei.cmu.edu/documents/1312/2005_009_001_52710.pdf">Secure Coding in C and C++</a></i>
+            ~ Robert C. Seacord
+          </li>
+          <li class="book"> <!-- The C Book -->
+            <i><a href="https://publications.gbdirect.co.uk/c_book/">The C Book</a></i>
+            ~ Mike Banahan, Declan Brady, Mark Doran
+          </li>
+          <li class="book"> <!-- K&R -->
+            <i>
+              <a href="https://www.cs.princeton.edu/~bwk/cbook.html">
+                The C Programming Language, 2nd ed.
+              </a>
+            </i>
+            ~ Brian Kernighan, Dennis Ritchie
+          </li>
+          <li class="book"> <!-- Writing a C Compiler -->
+            <i><a href="https://norasandler.com/book/">Writing a C Compiler</a></i>
+            ~ Nora Sandler
+          </li>
+        </ul>
+      </details>
+      <details> <!-- competitions -->
+        <summary>competitions</summary>
+        <ul>
+          <li><a href="https://www.ioccc.org/">The International Obfuscated C Code Contest </a></li>
+          <li><a href="http://www.underhanded-c.org/">The Underhanded C Contest</a></li>
+        </ul>
+      </details>
+      <details> <!-- humour, art -->
+        <summary>humour, art</summary>
+        <ul>
+          <li><a href="http://www.torek.net/torek/c/silliness.html"><i>Bits in the C</i> poem</a></li>
+          <li><a href="http://www.poppyfields.net/filks/00050.html"><i>C Hacker in Paradise</i> song</a> <x-cmt>only lyrics</x-cmt></li>
+          <li><a href="https://softpanorama.org/Lang/Cilorama/humor.shtml">C Humor - Softpanorama</a></li>
+          <li><a href="http://www.poppyfields.net/filks/00292.html"><i>Coding In C</i> song</a> <x-cmt>only lyrics</x-cmt></li>
+          <li><a href="https://www.a1k0n.net/2006/09/15/obfuscated-c-donut.html">Have a donut. – a1k0n.net</a></li>
+          <li><a href="https://www.youtube.com/watch?v=y3Y5YxzsY08"><i>Naval Applications of the C Programming Language</i> song</a></li>
+          <li><a href="https://www.cise.ufl.edu/%7Emanuel/obfuscate/obfuscate.html">Obfuscated C Code</a></li>
+          <li><a href="https://www.youtube.com/watch?v=tas0O586t80"><i>Program in C</i> song</a> <x-cmt><a href="https://twitter.com/Cinememer/status/937826627815333888">lyrics by Twitter user @Cinememer</a></x-cmt></li>
+          <li><a href="https://www.lysator.liu.se/c/ten-commandments.html">The Ten Commandments for C Programmers (Annotated Edition)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=1S1fISh-pag"><i>Write in C</i> song</a></li>
+        </ul>
+      </details>
+      <details> <!-- journals, zines -->
+        <summary>journals, zines</summary>
+        <ul>
+          <li><a href="https://accu.org/journals/nonmembers/cvu_issue_neutered/">C Vu</a></li>
+          <li><a href="https://web.archive.org/web/20051215214840/http://www.cuj.com/">C/C++ Users Journal</a></li>
+          <li><a href="https://web.archive.org/web/20150112073122/http://www.drdobbs.com/cpp">Dr. Dobb's</a></li>
+          <li><a href="https://accu.org/journals/nonmembers/overload_issue_members/">Overload</a></li>
+          <li><a href="http://jclt.iecc.com/">The Journal of C Language Translation</a></li>
+        </ul>
+      </details>
+      <details> <!-- derivative standards -->
+        <summary>derivative standards</summary>
+        <ul>
+          <li><a href="https://standards.iso.org/ittf/PubliclyAvailableStandards/c051126_ISO_IEC_TR_18037_2008.zip">ISO/IEC TR 18037:2008</a> <x-cmt>Embedded C</x-cmt></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/">POSIX C</a></li>
+        </ul>
+      </details>
+      <details> <!-- discussions, Q&A -->
+        <summary>discussions, Q&amp;A</summary>
+        <ul>
+          <li><a href="https://www.reddit.com/r/C_Programming/comments/1hddvwd">Are there three types of array memory allocation?</a></li>
+          <li><a href="https://stackoverflow.com/q/47037701">Can C syntax define a self-contained, statically allocated, totally const data structure with backward and forward references (pointers)?</a></li>
+          <li><a href="https://www.reddit.com/r/C_Programming/comments/1h4e4tb">Does C require to be compiled on a computer that uses the Von Neumann architecture?</a></li>
+          <li><a href="https://www.reddit.com/r/C_Programming/comments/1gqu0j3">ITT: Make Up Awful Extensions to the C Language</a></li>
+          <li><a href="https://stackoverflow.com/q/2100331">Macro definition to determine big endian or little endian machine?</a></li>
+          <li><a href="https://stackoverflow.com/q/79923">What and where are the stack and heap?</a></li>
+          <li><a href="https://www.reddit.com/r/C_Programming/comments/1hkpgvx">What Could Go Wrong If You Mix C Compilers</a></li>
+          <li><a href="https://www.reddit.com/r/C_Programming/comments/1hddom7">What is the strict aliasing rule? And why does it help with optimisation? How should I do type punning "safely"?</a></li>
+          <li><a href="https://stackoverflow.com/q/5431941">Why is <code>while(!feof(file))</code> always wrong?</a></li>
+        </ul>
+      </details>
+      <details> <!-- papers, articles -->
+        <summary>papers, articles</summary>
+        <ul style="text-wrap:nowrap">
+          <li><a href="https://homes.cs.washington.edu/~mernst/pubs/c-preprocessor-tse2002-abstract.html">An empirical analysis of C preprocessor use</a></li>
+          <li><a href="https://www.sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html">A beginners' guide <i>away</i> from <code>scanf()</code></a></li>
+          <li><a href="https://softpanorama.org/Bookshelf/Computers/c.shtml">Best C language textbooks - Softpanorama</a></li>
+          <li><a href="https://c-faq.com/decl/spiral.anderson.html">Clockwise/Spiral Rule</a></li>
+          <li><a href="https://people.rennes.inria.fr/Frederic.Besson/compcerts.pdf">CompCertS: A Memory-Aware Verified C Compiler using Pointer as Integer Semantics</a></li>
+          <li><a href="https://begriffs.com/posts/2021-07-04-shared-libraries.html">Dynamic linking best practices</a></li>
+          <li><a href="https://greenlab.di.uminho.pt/wp-content/uploads/2017/10/sleFinal.pdf">Energy Efficiency across Programming Languages</a></li>
+          <li><a href="https://jorenar.com/blog/gotophobia-harmful">GOTOphobia considered harmful</a></li>
+          <li><a href="https://tratt.net/laurie/blog/2008/how_can_c_programs_be_so_reliable.html">How can C Programs be so Reliable?</a></li>
+          <li><a href="https://goshdarnfunctionpointers.com/">How Do I Declare a Function Pointer in C?</a></li>
+          <li><a href="https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/">How I cut GTA Online loading times by 70%</a></li>
+          <li><a href="https://jorenar.com/blog/less-known-c">Lesser known tricks, quirks and features of C</a></li>
+          <li><a href="https://wozniak.ca/blog/2018/06/25/1/index.html">Massacring C Pointers</a></li>
+          <li><a href="https://www.samskivert.com/internet/deep/1997/01/08/">The 0xC days of Christmas</a></li>
+          <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/chist.html">The Development of the C Language</a> by Dennis Ritchie</li>
+          <li><a href="https://www2.dmst.aueb.gr/dds/pubs/conf/2016-ICSE-ProgEvol/html/SLK16.pdf">The Evolution of C Programming Practices: A&nbsp;Study of the Unix Operating System 1973–2015</a></li>
+          <li><a href="https://thephd.dev/c-undefined-behavior-and-the-sledgehammer-guideline">Undefined behavior, and the Sledgehammer Principle</a></li>
+          <li><a href="https://lwn.net/Articles/250967/">What every programmer should know about memory, Part 1</a></li>
+        </ul>
+      </details>
+      <details> <!-- revisions, history -->
+        <summary>revisions, history</summary>
+        <ul>
+          <li style="opacity:0.7">B
+            <ul>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/kbman.html">Users' Reference to B</a> <x-cmt>by Ken Thompson</x-cmt></li>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/btut.html">A Tutorial Introduction to the Language B</a> <x-cmt>by Brian Kernighan</x-cmt></li>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/bref.html">User's Reference to B on MH-TSS</a> <x-cmt>by Steve Johnson</x-cmt></li>
+            </ul>
+          </li>
+          <li>pre-K&amp;R C
+            <ul>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/cman74.pdf">C Reference Manual (1974)</a></li>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/cman.pdf">C Reference Manual (1975)</a></li>
+              <li><a href="https://www.nokia.com/bell-labs/about/dennis-m-ritchie/ctut.pdf">Programming in C - A Tutorial</a> <x-cmt><a href="https://www.lysator.liu.se/c/bwk-tutor.html">mirror</a></x-cmt></li>
+            </ul>
+          </li>
+          <li>K&amp;R C
+            <ul>
+              <li><a href="https://drive.google.com/drive/folders/1OvgKikM8vpZGxNzCjt4BM1ggBX0dlr-y">Draft #1 of The C Programming Language</a>
+                <x-cmt>
+                  <a href="https://mastodon.social/@aka_pugs/109480716344891925">tweet</a>;
+                  <a href="https://archive.org/details/c-programming-language-draft-1/99-Complete">mirror</a>;
+                  <a href="https://archive.org/details/the-c-programming-language-draft-version-1">mirror</a>
+                </x-cmt>
+              </li>
+              <li><a href="https://openlibrary.org/books/OL4558528M/The_C_programming_language">The C Programming Language, 1st ed.</a>
+                <!--
+                  https://annas-archive.org/md5/5588b141da4affdcc764e8ff0acf0f52
+                -->
+              </li>
+            </ul>
+          </li>
+          <li>C89 <x-cmt>ANSI C</x-cmt>
+            <ul>
+              <li><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub160.pdf">FiPS PUB 160</a></li>
+              <li><a href="https://port70.net/~nsz/c/c89/c89-draft.html">The C89 Draft</a> <x-cmt><a href="https://www.bsb.me.uk/ansi-c/ansi-c-one-file">mirror</a></x-cmt></li>
+              <li><a href="https://www.lysator.liu.se/c/rat/title.html">The ANSI C Rationale</a> <x-cmt><a href="https://port70.net/~nsz/c/c89/rationale/title.html">mirror</a></x-cmt></li>
+              <li><a href="https://archive.org/details/c-information-bulletin-1">C Information Bulletin # 1</a> <x-cmt><s>N261</s>; <a href="https://drive.google.com/file/d/0B-3PfyBhOSOxOTdjYmM1N2ItMmE0ZC00OGE3LTllODUtZDNkMDMzYWU3NDlk">mirror</a></x-cmt></li>
+            </ul>
+          </li>
+          <li>C90
+            <ul>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/tc1.htm">Technical Corrigendum 1</a></li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/tc2.htm">Technical Corrigendum 2</a></li>
+            </ul>
+          </li>
+          <li>C95
+            <ul style="opacity:0.6">
+              <li><a href="https://www.lysator.liu.se/c/na1.html">A brief description of Normative Addendum 1</a> <x-cmt>by Clive D.W. Feather</x-cmt></li>
+              <li><a href="https://unix.org/version2/whatsnew/login_mse.html">ISO C Amendment 1 (MSE)</a></li>
+            </ul>
+          </li>
+          <li>C99
+            <ul>
+              <li><a href="https://open-std.org/jtc1/sc22/wg14/www/docs/n843.htm">N843</a> <x-cmt>draft from before FCD ballot</x-cmt></li>
+              <li><s>N869</s> <x-cmt><a href="https://web.archive.org/web/20050911052820/http://dev.unicals.com/c99-draft.html">archived by Unicals Group</a></x-cmt></li>
+              <li><s>N949</s> &nbsp; <x-cmt>C99 + TC1</x-cmt></li>
+              <li><a href="https://www.open-std.org/JTC1/SC22/WG14/www/docs/n1124.pdf">N1124</a> <x-cmt>C99 + TC1,TC2</x-cmt></li>
+              <li><a href="https://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf">N1256</a> <x-cmt>C99 + TC1,TC2,TC3</x-cmt></li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/9899tc1/n32071.PDF">Technical Corrigendum 1</a></li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/9899-1999_cor_2-2004.pdf">Technical Corrigendum 2</a></li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1235.pdf">Technical Corrigendum 3</a></li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">C99RationaleV5.10</a></li>
+            </ul>
+          </li>
+          <li>C11
+            <ul>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">N1570</a></li>
+            </ul>
+          </li>
+          <li>C17
+            <ul>
+              <li><s>N2176</s> <!-- https://en.cppreference.com/w/c/links#C_Language_and_library_references --> </li>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2310.pdf">N2310</a></li>
+            </ul>
+          </li>
+          <li>C23
+            <ul>
+              <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf">N3220</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div style="font-size:0.7em;margin:1em 0.5em">
+          See also:
+          <ul style="margin:0">
+            <li><a href="https://clc-wiki.net/wiki/C_standardisation:ISO#Obtaining_the_Standard">C standardisation:ISO - clc-wiki</a></li>
+            <li><a href="https://en.cppreference.com/w/c/language/history">History of C - cppreference.com</a></li>
+            <li><a href="https://www.iso-9899.info/wiki/The_Standard">The Standard - Wiki of #C on Libera</a></li>
+            <li><a href="https://stackoverflow.com/q/17014835">Where can one find the C89/C90 standards in PDF format? - Stack Overflow</a></li>
+            <li><a href="https://stackoverflow.com/q/81656">Where do I find the current C or C++ standard documents? - Stack Overflow</a></li>
+          </ul>
+        </div>
+      </details>
+      <details> <!-- standards, guidelines -->
+        <summary>standards, guidelines</summary>
+        <ul>
+          <li><a href="https://misra.org.uk/">MISRA C</a></li>
+          <li><a href="https://wiki.sei.cmu.edu/confluence/display/c">SEI CERT C Coding Standard</a></li>
+        </ul>
+      </details>
+      <details> <!-- tutorials, courses -->
+        <summary>tutorials, courses</summary>
+        <ul style="text-wrap:nowrap">
+          <li><a href="https://nrk.neocities.org/articles/c-static-analyzers">A gentle introduction to static analyzers for C</a></li>
+          <li><a href="https://www.cprogramming.com/tutorial/c-tutorial.html">C Tutorial - Learn C - Cprogramming.com</a></li>
+          <li><a href="https://guide.handmadehero.org/intro-to-c/">Intro to C on Windows — Handmade Hero</a></li>
+          <li><a href="https://abstractexpr.com/2023/06/29/structures-in-c-from-basics-to-memory-alignment/">Structures in C: From Basics to Memory Alignment – Abstract Expression</a></li>
+          <li><a href="https://begriffs.com/posts/2020-08-31-portable-stable-software.html">Tips for stable and portable software</a></li>
+          <li><a href="http://www.torek.net/torek/c/">Tired of being called a dummy? - C For Smarties</a></li>
+          <li><a href="https://itnext.io/polymorphism-in-c-tutorial-bd95197ddbf9">Tutorial: Polymorphism in C | by Christopher Bazley</a></li>
+          <li><a href="https://maplant.com/2020-04-25-Writing-a-Simple-Garbage-Collector-in-C.html">Writing a Simple Garbage Collector in C</a></li>
+        </ul>
+      </details>
+      <details> <!-- videos, lectures -->
+        <summary>videos, lectures</summary>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=de2Hsvxaf8M">"C" Programming Language: Brian Kernighan - Computerphile</a></li>
+          <li><a href="https://www.youtube.com/watch?v=w3_e9vZj7D8">Advanced C: The UB and optimizations that trick good programmers.</a></li>
+          <li><a href="https://www.youtube.com/watch?v=CtAysS8AlsE">Brian Kernighan - C and C++ at Bell Labs</a></li>
+          <li><a href="https://www.youtube.com/watch?v=Sg4U4r_AgJU">Brian Kernighan on successful language design</a></li>
+          <li><a href="https://www.youtube.com/watch?v=yOyaJXpAYZQ">Comparing C to machine language</a></li>
+          <li><a href="https://www.youtube.com/watch?v=8SUkrR7ZfTA">Elements of Programming Style - Brian Kernighan</a></li>
+          <li><a href="https://www.youtube.com/watch?v=443UNeGrFoM">How I program C</a> by Eskil Steenberg</li>
+          <li><a href="https://www.youtube.com/@JacobSorber">Jacob Sorber - YouTube</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ci1PJexnfNE">Why C is so Influential - Computerphile</a></li>
+        </ul>
+      </details>
+      <details> <!-- webpages, blogs -->
+        <summary>webpages, blogs</summary>
+        <ul>
+          <li><a href="https://abstractexpr.com/">Abstract Expression</a></li>
+          <li><a href="https://begriffs.com/">begriffs</a></li>
+          <li><a href="https://www.cs.princeton.edu/~bwk/">Brian Kernighan's Home Page</a></li>
+          <li><a href="https://wozniak.ca/blog/">Curried Lambda</a></li>
+          <li><a href="https://www.cprogramming.com/">Cprogramming.com</a></li>
+          <li><a href="http://c-lang.org/">C言語</a></li>
+          <li><a href="https://www.bell-labs.com/usr/dmr/www/">Dennis Ritchie Home Page</a></li>
+          <li><a href="https://eli.thegreenplace.net/tag/c-c">Eli Bendersky's website</a></li>
+          <li><a href="https://gustedt.wordpress.com/">Jens Gustedt's Blog</a></li>
+          <li><a href="https://jorenar.com/blog/">Jorenar --blog</a></li>
+          <li><a href="https://nrk.neocities.org/articles">NRK's Homepage</a></li>
+          <li><a href="https://nullprogram.com/">null program</a></li>
+          <li><a href="https://blog.aaronballman.com/">Ruminations</a></li>
+          <li><a href="https://simonwillison.net/tags/c/">Simon Willison’s Weblog</a></li>
+          <li><a href="https://thephd.dev/">The Pasture</a></li>
+        </ul>
+      </details>
+      <details> <!-- wikis, references -->
+        <summary>wikis, references</summary>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere?target=Template%3AC+programming+language&namespace=0&hidetrans=1">Articles</a> linking to <a href="https://en.wikipedia.org/wiki/Template:C_programming_language">Template:C programming language</a> on Wikipedia</li>
+          <li><a href="https://en.cppreference.com/w/c">C reference - cppreference.com</a></li>
+          <li><a href="https://wiki.c2.com/?CeeLanguage">Cee Language</a> on WikiWikiWeb</li>
+          <li><a href="https://clc-wiki.net/wiki/Main_Page">clc-wiki</a> by comp.lang.c</li>
+          <li><a href="https://manual.cs50.io/">CS50 Manual Pages</a></li>
+          <li><a href="https://www.gnu.org/software/c-intro-and-ref/manual/">GNU C Language Intro and Reference Manual</a></li>
+          <li><a href="https://wiki.osdev.org/C">OSDev.org</a></li>
+          <li><a href="https://github.com/cpredef/predef">Pre-defined C/C++ Compiler Macros</a></li>
+          <li><a href="https://web.archive.org/web/20150320010704/https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/">The C Library Reference Guide</a> <x-cmt>by Eric Huss, 1997</x-cmt></li>
+          <li><a href="https://www.iso-9899.info/wiki/Main_Page">Wiki by #C on Freenode and Libera</a></li>
+        </ul>
+      </details>
+
+      <h3>More lists of ...</h3>
+      <details> <!-- books -->
+        <summary>books</summary>
+        <ul>
+          <li><a href="https://accu.org/reviews/by_rating/">ACCU : book reviews</a></li>
+          <li><a href="https://www.iso-9899.info/wiki/Books">Books - Wiki of #C on Libera</a></li>
+          <li><a href="https://www.cprogramming.com/books/c.html">Recommended C Programming Books - Cprogramming.com</a></li>
+        </ul>
+      </details>
+      <details> <!-- libraries -->
+        <summary>libraries</summary>
+        <ul>
+          <li><a href="https://en.cppreference.com/w/c/links/libs">A list of open source C libraries - cppreference.com</a></li>
+        </ul>
+      </details>
+      <details> <!-- Q&A, FAQ -->
+        <summary>Q&amp;A, FAQ</summary>
+        <ul>
+          <li><a href="https://www.iso-9899.info/wiki/C_gotchas">C gotchas - Wiki of #C on Libera</a></li>
+          <li><a href="https://archive.org/details/c-information-bulletin-1">C Information Bulletin # 1</a> <x-cmt><s>N261</s>; <a href="https://drive.google.com/file/d/0B-3PfyBhOSOxOTdjYmM1N2ItMmE0ZC00OGE3LTllODUtZDNkMDMzYWU3NDlk">mirror</a></x-cmt></li>
+          <li><a href="https://c-faq.com/">comp.lang.c Frequently Asked Questions</a></li>
+          <li><a href="https://faq.cprogramming.com/cgi-bin/smartfaq.cgi">FAQ - Cprogramming.com</a></li>
+          <li><a href="https://isocpp.org/wiki/faq/mixing-c-and-cpp">How to mix C and C++, C++ FAQ</a></li>
+          <li><a href="https://www.seebs.net/faqs/c-iaq.html">Infrequently Asked Questions in comp.lang.c</a> <x-cmt>humorous</x-cmt></li>
+          <li><a href="https://web.archive.org/web/20181217110054/http://www.comeaucomputing.com/techtalk/">Tech Talk About C++ and C / Comeau C++ and C FAQ</a></li>
+          <li><a href="https://web.archive.org/web/20181215222738/http://www.comeaucomputing.com/techtalk/c99/">Tech Talk About C99 / Comeau C99 FAQ</a></li>
+        </ul>
+      </details>
+      <details open> <!-- tools -->
+        <summary>tools</summary>
+        <details> <!-- compilers -->
+          <summary>compilers</summary>
+          <ul>
+            <li><a href="https://github.com/BaseMax/AwesomeCompiler?tab=readme-ov-file#c">BaseMax/AwesomeCompiler - GitHub</a></li>
+            <li><a href="http://ee.cleversoul.com/compilers.html">C Cross Compilers - The EE Compendium</a></li>
+            <li><a href="https://en.wikibooks.org/wiki/C_Programming/C_Compilers_Reference_List">C Programming/C Compilers Reference List - Wikibooks</a></li>
+            <li><a href="https://clc-wiki.net/wiki/C_resources:Compilers">C resources:Compilers - clc-wiki</a></li>
+            <li><a href="https://documentation.blackduck.com/bundle/coverity-docs/page/deploy-install-guide/topics/c_cpp_compilers.html">C/C++ compilers - Black Duck Documentation Portal</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Category:C_(programming_language)_compilers">Category:C (programming language) compilers - Wikipedia</a></li>
+            <li><a href="https://c.godbolt.org/">Compiler Explorer</a></li>
+            <li><a href="https://www.thefreecountry.com/compilers/cpp.shtml">Free C / C++ Compilers and Interpreters (thefreecountry.com)</a></li>
+            <li><a href="https://iq.opengenus.org/list-of-c-compilers/">List of C Compilers (As early as 1973 and with the latest one at 2017) - OpenGenus IQ</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_compilers#C_compilers">List of compilers - Wikipedia</a></li>
+            <li><a href="https://www.reddit.com/r/Cprog/comments/4egaog/small_lesser_known_c_compilers_a_list/">Small, lesser known C compilers - a list : r/Cprog</a></li>
+          </ul>
+        </details>
+        <details> <!-- linters -->
+          <summary>linters, analyzers</summary>
+          <ul>
+            <li><a href="https://analysis-tools.dev/tools?languages=c">analysis-tools.dev</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis#C,_C++">List of tools for static code analysis - Wikipedia</a></li>
+            <li><a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">Source Code Analysis Tools | OWASP Foundation</a></li>
+            <li><a href="https://spinroot.com/static/">Static Analysis Tools for C Code - Spin</a></li>
+          </ul>
+        </details>
+        <details> <!-- reverse engineering -->
+          <summary>reverse engineering</summary>
+          <ul>
+            <li><a href="https://decompilation.wiki/decompilers/directory/">Decompiler Directory - Decompilation Wiki</a></li>
+            <li><a href="https://dogbolt.org/">Decompiler Explorer</a></li>
+            <li><a href="https://en.wikibooks.org/wiki/X86_Disassembly/Disassemblers_and_Decompilers#Common_Decompilers">x86 Disassembly/Disassemblers and Decompilers - Wikibooks</a></li>
+            <li><a href="https://www.program-transformation.org/Transform/MachineCodeDecompilers.html">Program Transformation Wiki / Machine Code Decompilers</a></li>
+          </ul>
+      </details>
+        <details> <!-- misc. -->
+          <summary>misc.</summary>
+          <ul>
+            <li><a href="https://www.gnu.org/software/global/links.html">'Source code reading' related sites</a></li>
+            <li><a href="https://clc-wiki.net/wiki/C_resources:Parsing_tools">C resources:Parsing tools - clc-wiki</a></li>
+            <li><a href="https://web.archive.org/web/20160911104100/http://free-compilers.sharnoff.org/LANG/C-1.html">Catalog of compilers: C</a> <x-cmt>bit misleading title; list has other tools too</x-cmt></li>
+            <li><a href="https://en.wikipedia.org/wiki/Comparison_of_documentation_generators">Comparison of documentation generators</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_build_automation_software">List of build automation software - Wikipedia</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_debuggers">List of debuggers - Wikipedia</a></li>
+          </ul>
+        </details>
+      </details>
+      <details open> <!-- misc. -->
+        <summary>misc.</summary>
+        <ul>
+          <li><a href="http://www.hal9k.com/cug/links/index1.htm">CUJ Source Links Index</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/List_of_C-family_programming_languages">List of C-family programming languages - Wikipedia</a></li>
+          <li><a href="https://www.quut.com/c">Programming in C</a> <x-cmt><a href="https://www.lysator.liu.se/c/">mirror</a></x-cmt></li>
+          <li><a href="https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html">Publicly Available Standards</a> <x-cmt>ISO/IEC JTC 1</x-cmt></li>
+          <li><a href="https://www.backerstreet.com/cg/work.htm">Reverse Engineering Resources</a> <x-cmt>by Giampiero Caprino</x-cmt></li>
+          <li><a href="https://web.archive.org/web/20050403174114/http://dev.unicals.com/">Unicals Group - Developer's Corner</a></li>
+          <li><a href="https://en.cppreference.com/w/c/links">Useful resources - cppreference.com</a></li>
+          <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/wg14_document_log.htm">WG14 Document Log</a></li>
+        </ul>
+      </details>
+    </article>
+    <article id="tools" class="details-list">
+      <h2>Tools</h2>
+      <x-cmt style="display:block; margin-bottom:0.5em">
+        The below is but a <strong>tiny</strong> fraction of all exiting tools
+        for C development; while also incomplete, more utilities can be found
+        on similar lists we link to in the <a href="#resources">resources</a>.
+      </x-cmt>
+      <details> <!-- build automation -->
+        <summary>build automation</summary>
+        <ul class="tools-grid">
+          <li><a href="https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html">Autotools</a> <!-- https://autotools.info --></li>
+          <li><a href="https://bazel.build/">Bazel</a></li>
+          <li><a href="https://build2.org/">build2</a></li>
+          <li><a href="https://www.throwtheswitch.org/ceedling">Ceedling</a></li>
+          <li><a href="https://cmake.org/">CMake</a></li>
+          <li><a href="https://www.gnu.org/software/make/">GNU Make</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html">Make</a></li>
+          <li><a href="https://mesonbuild.com/">Meson</a></li>
+          <li><a href="https://docs.microsoft.com/visualstudio/msbuild/msbuild">MSBuild</a></li>
+          <li><a href="https://ninja-build.org">Ninja</a></li>
+          <li><a href="https://github.com/tsoding/nob.h">nob.h</a></li>
+          <li><a href="https://premake.github.io/">Premake</a></li>
+          <li><a href="https://scons.org/">SCons</a></li>
+          <li><a href="https://gittup.org/tup/">tup</a></li>
+          <li><a href="https://waf.io/">Waf</a></li>
+          <li><a href="https://xmake.io/">xmake</a></li>
+        </ul>
+      </details>
+      <details> <!-- compilers -->
+        <summary>compilers</summary>
+        <ul class="tools-grid">
+          <li><a href="https://www.amd.com/en/developer/aocc.html">AOCC</a></li>
+          <li><a href="https://cc65.github.io/">cc65</a></li>
+          <li><a href="https://clang.llvm.org/">Clang</a></li>
+          <li><a href="https://compcert.org/">CompCert</a></li>
+          <li><a href="https://digitalmars.com/download/freecompiler.html">Digital Mars</a></li>
+          <li><a href="https://gcc.gnu.org/">GCC</a></li>
+          <li><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html">Intel® oneAPI <span class="nobr">DPC++/C++</span> Compiler</a></li>
+          <li><a href="http://gsoc.cat-v.org/projects/kencc/">KenCC</a></li>
+          <li><a href="https://drh.github.io/lcc/">lcc</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/cpp/c-language">MSVC</a></li>
+          <li><a href="https://web.archive.org/web/20231212090621/http://pcc.ludd.ltu.se/">Portable C Compiler</a></li>
+          <li><a href="https://support.sas.com/en/software/sas-c-support.html">SAS/C</a></li>
+          <li><a href="https://www.simple-cc.org/">SCC</a></li>
+          <li><a href="https://sdcc.sourceforge.net/">SDCC</a></li>
+          <li><a href="https://bellard.org/tcc/">TinyCC</a></li>
+        </ul>
+      </details>
+      <details> <!-- debugging -->
+        <summary>debugging</summary>
+        <ul class="tools-grid">
+          <li><a href="https://github.com/csmith-project/creduce">C-Reduce</a></li>
+          <li><a href="https://github.com/marxin/cvise/">C-Vise</a></li>
+          <li><a href="https://www.gnu.org/software/ddd/">DDD</a></li>
+          <li><a href="https://drmemory.org/">Dr. Memory</a></li>
+          <li><a href="https://www.sourceware.org/gdb/">GDB</a></li>
+          <li><a href="https://lldb.llvm.org/">LLDB</a></li>
+          <li><a href="https://www.youtube.com/watch?v=pvkn9Xz-xks">OPA</a></li>
+          <li><a href="https://rr-project.org/">rr</a></li>
+          <li><a href="https://strace.io/">strace</a></li>
+          <li><a href="https://sourceware.org/systemtap/">SystemTap</a></li>
+          <li><a href="https://totalview.io/">TotalView</a></li>
+          <li><a href="https://undo.io/products/udb/">UDB</a></li>
+          <li><a href="https://valgrind.org/">Valgrind</a></li>
+        </ul>
+      </details>
+      <details> <!-- docs generators -->
+        <summary>docs generators</summary>
+        <ul class="tools-grid">
+          <li><a href="http://wwwmathlabo.univ-poitiers.fr/~maavl/CWEBx/">CWEBx</a></li>
+          <li><a href="https://www.doxygen.nl/">Doxygen</a></li>
+          <li><a href="https://www.sphinx-doc.org">Sphinx</a></li>
+        </ul>
+      </details>
+      <details> <!-- editors/IDEs -->
+        <summary>editors/IDEs</summary>
+        <ul class="tools-grid">
+          <li><a href="https://www.jetbrains.com/clion/">CLion</a></li>
+          <li><a href="https://www.codeblocks.org/">Code::Blocks</a></li>
+          <li><a href="https://codelite.org/">CodeLite</a></li>
+          <li><a href="https://coderunnerapp.com/">CodeRunner</a></li>
+          <li><a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME">CodeWarrior</a></li>
+          <li><a href="https://www.embarcadero.com/free-tools/dev-cpp">Dev-C++</a></li>
+          <li><a href="https://projects.eclipse.org/projects/tools.cdt">Eclipse CDT</a></li>
+          <li><a href="https://www.segger.com/products/development-tools/embedded-studio/">SEGGER Embedded Studio</a></li>
+          <li><a href="https://www.geany.org/">Geany</a></li>
+          <li><a href="https://www.adacore.com/gnatpro/toolsuite/gnatstudio">GNAT Studio</a></li>
+          <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a></li>
+          <li><a href="https://helix-editor.com/">Helix</a></li>
+          <li><a href="https://www.iar.com/">IAR Embedded Workbench</a></li>
+          <li><a href="https://kakoune.org/">Kakoune</a></li>
+          <li><a href="https://kate-editor.org/">Kate</a></li>
+          <li><a href="https://kdevelop.org/">KDevelop</a></li>
+          <li><a href="https://www.keil.com/">Keil μVision</a></li>
+          <li><a class="nobr" href="http://ni.com/cvi">LabWindows/CVI</a></li>
+          <li><a href="https://neovim.io/">Neovim</a></li>
+          <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
+          <li><a href="https://openwatcom.org/">Open Watcom</a></li>
+          <li><a href="https://www.oracle.com/application-development/technologies/developerstudio.html">Oracle Developer Studio</a></li>
+          <li><a href="http://www.smorgasbordet.com/pellesc/">Pelles C</a></li>
+          <li><a href="https://www.slickedit.com/">SlickEdit</a></li>
+          <li><a href="https://www.sourceinsight.com/">Source Insight</a></li>
+          <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          <li><a href="https://www.vim.org/">Vim</a></li>
+          <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
+          <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+          <li><a href="https://vscodium.com/">VSCodium</a></li>
+          <li><a href="https://developer.apple.com/xcode/">Xcode</a></li>
+        </ul>
+      </details>
+      <details> <!-- formatters -->
+        <summary>formatters</summary>
+        <ul class="tools-grid">
+          <li><a href="https://astyle.sourceforge.net/">Artistic Style</a></li>
+          <li><a href="https://invisible-island.net/bcpp/">bcpp</a></li>
+          <li><a href="https://clang.llvm.org/docs/ClangFormat.html">ClangFormat</a></li>
+          <li><a href="https://sourceforge.net/projects/gcgreatcode/">GC GreatCode</a></li>
+          <li><a href="https://www.gnu.org/software/indent/">GNU indent</a></li>
+          <li><a href="https://uncrustify.sourceforge.net/">Uncrustify</a></li>
+          <li><a href="https://universalindent.sourceforge.net/">UniversalIndentGUI</a></li>
+        </ul>
+      </details>
+      <details> <!-- index/xref/nav/browse -->
+        <summary>index/xref/nav/browse</summary>
+        <ul class="tools-grid">
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/cflow.html">cflow</a></li>
+          <li><a href="https://github.com/ruben2020/codequery">CodeQuery</a></li>
+          <li><a href="https://cscope.sourceforge.net/">Cscope</a></li>
+          <li><a href="https://www.spinellis.gr/cscout/index.html">CScout</a></li>
+          <li><a href="https://www.gnu.org/software/global/">Global</a></li>
+          <li><a href="https://lxr.sourceforge.io">LXR</a></li>
+          <li><a href="https://oracle.github.io/opengrok/">OpenGrok</a></li>
+          <li><a href="https://ctags.io/">Universal Ctags</a></li>
+        </ul>
+      </details>
+      <details> <!-- interpreters -->
+        <summary>interpreters/REPL</summary>
+        <ul class="tools-grid">
+          <li><a href="https://github.com/hexagonal-sun/bic">BIC</a></li>
+          <li><a href="https://neugierig.org/software/c-repl/">c-repl</a></li>
+          <li><a href="https://www.softintegration.com/">Ch</a></li>
+          <li><a href="http://www.hanno.jp/gotom/Cint.html">CINT</a></li>
+          <li><a href="https://www.artificialworlds.net/wiki/IGCC/IGCC">Interactive GCC</a></li>
+          <li><a href="https://gitlab.com/zsaleeba/picoc">PicoC</a></li>
+        </ul>
+      </details>
+      <details> <!-- LSP servers -->
+        <summary>LSP servers</summary>
+        <ul class="tools-grid">
+          <li><a href="https://github.com/MaskRay/ccls/wiki">ccls</a></li>
+          <li><a href="https://clangd.llvm.org/">clangd</a></li>
+          <li><a href="https://github.com/jacobdufault/cquery">cquery</a></li>
+          <li><a href="https://github.com/SonarSource/sonarlint-language-server">SonarLint LS</a></li>
+          <li><a href="https://github.com/swiftlang/sourcekit-lsp">SourceKit-LSP</a></li>
+        </ul>
+      </details>
+      <details> <!-- linters, analyzers -->
+        <summary>linters, analyzers</summary>
+        <ul class="tools-grid">
+          <li><a href="https://www.astree.ens.fr/">Astrée</a></li>
+          <li><a href="https://clang-analyzer.llvm.org/">Clang Static Analyzer</a></li>
+          <li><a href="https://clang.llvm.org/extra/clang-tidy/">Clang-Tidy</a></li>
+          <li><a href="https://cppcheck.sourceforge.io/">Cppcheck</a></li>
+          <li><a href="https://dwheeler.com/flawfinder/">Flawfinder</a></li>
+          <li><a href="https://www.frama-c.com/">Frama-C</a></li>
+          <li><a href="https://www.perforce.com/products/helix-qac">Helix QAC</a></li>
+          <li><a href="https://github.com/NASA-SW-VnV/ikos">IKOS</a></li>
+          <li><a href="https://include-what-you-use.org/">include-what-you-use</a></li>
+          <li><a href="https://fbinfer.com/">Infer</a></li>
+          <li><a href="https://www.perforce.com/products/klocwork">Klocwork</a></li>
+          <li><a href="https://man.freebsd.org/cgi/man.cgi?query=lint&manpath=FreeBSD+11.2-RELEASE">lint</a></li>
+          <li><a href="https://google.github.io/osv-scanner/">OSV-Scanner</a></li>
+          <li><a href="https://pvs-studio.com/">PVS-Studio</a></li>
+          <li><a href="https://www.sonarsource.com/knowledge/languages/c/">Sonar</a></li>
+          <li><a href="https://splint.org/">Splint</a></li>
+        </ul>
+      </details>
+      <details> <!-- macro (pre)processors -->
+        <summary>macro (pre)processors</summary>
+        <ul class="tools-grid">
+          <li>built-in cpp</li>
+          <li><a href="https://gustedt.gitlabpages.inria.fr/ellipsis/">eĿlipsis</a></li>
+          <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/m4.html">m4</a></li>
+        </ul>
+      </details>
+      <details> <!-- profiling, measures -->
+        <summary>profiling, measures</summary>
+        <ul class="tools-grid">
+          <li><a href="https://invisible-island.net/atac/">atac</a></li>
+          <li><a href="https://gcc.gnu.org/onlinedocs/gcc/Gcov.html">gcov</a></li>
+          <li><a href="https://perfwiki.github.io/main/">perf</a></li>
+          <li><a href="http://www.geonius.com/software/tools/npath.html">npath</a></li>
+        </ul>
+      </details>
+      <details> <!-- package managers -->
+        <summary>package managers</summary>
+        <ul class="tools-grid">
+          <li><a href="https://buckaroo.pm/">Buckaroo</a></li>
+          <li><a href="https://build2.org/">build2</a></li>
+          <li><a href="https://github.com/clibs/clib">clib(1)</a></li>
+          <li><a href="https://conan.io/">Conan</a></li>
+          <li><a href="https://github.com/cpm-cmake/CPM.cmake">CPM.cmake</a></li>
+          <li><a href="https://github.com/cpp-pm/hunter">Hunter</a></li>
+          <li><a href="https://nixos.org/">Nix</a></li>
+          <li><a href="https://software-network.org/">Software Network</a></li>
+          <li><a href="https://spack.io/">Spack</a></li>
+          <li><a href="https://vcpkg.io/">vcpkg</a></li>
+          <li><a href="https://xrepo.xmake.io">xrepo</a></li>
+          <li>package manager native to the OS</li>
+        </ul>
+      </details>
+      <details> <!-- reverse engineering -->
+        <summary>reverse engineering</summary>
+        <ul class="tools-grid">
+          <li><a href="https://angr.io/">angr</a></li>
+          <li><a href="https://binary.ninja/">Binary Ninja</a></li>
+          <li><a href="https://github.com/BoomerangDecompiler/boomerang">Boomerang</a></li>
+          <li><a href="https://ghidra-sre.org/">Ghidra</a></li>
+          <li><a href="https://hex-rays.com/ida-free">IDA</a></li>
+          <li><a href="https://rada.re">radare2</a></li>
+          <li><a href="https://www.backerstreet.com/rec/rec.htm">REC Studio</a></li>
+          <li><a href="https://github.com/uxmal/reko">Reko</a></li>
+          <li><a href="https://www.relyze.com/">Relyze</a></li>
+          <li><a href="https://github.com/avast/retdec">RetDec</a></li>
+          <li><a href="https://rev.ng/">rev.ng</a></li>
+        </ul>
+      </details>
+      <details> <!-- transpilers -->
+        <summary>transpilers</summary>
+        <ul class="tools-grid">
+          <li><a href="https://github.com/libav/c99-to-c89">c99-to-c89</a></li>
+          <li><a href="https://github.com/thradams/cake">Cake</a></li>
+        </ul>
+      </details>
+      <details> <!-- misc. -->
+        <summary>misc.</summary>
+        <ul class="tools-grid">
+          <li><a href="https://ccache.dev/">Ccache</a></li>
+          <li><a href="https://github.com/paul-j-lucas/cdecl">cdecl</a></li>
+          <li><a href="https://coccinelle.gitlabpages.inria.fr/website/">Coccinelle</a></li>
+          <li><a href="https://invisible-island.net/cproto/">cproto</a></li>
+          <li><a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a></li>
+          <li><a href="https://www.xrefactory.com/xrefactory/main.html">Xrefactory</a></li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <details open> <!-- online tools -->
+        <summary>online tools</summary>
+        <dl style="font-size:0.9em">
+          <dt><a href="https://c.godbolt.org/">Compiler Explorer</a></dt>
+          <dd>
+            An interactive web tool allowing to write code and see the generated
+            assembly output in real-time. Supports multiple compilers and
+            provides insights into how different code constructs are translated
+            into machine instructions.
+          </dd>
+
+          <dt><a href="https://cdecl.org/">cdecl: C gibberish <span style="font-size:1.1em;vertical-align:text-bottom">&harr;</span> English</a></dt>
+          <dd>
+            An online version of the classic <code>cdecl</code> utility for
+            "translating" C declarations from and to English.
+          </dd>
+
+          <dt><a href="https://dogbolt.org/">Decompiler Explorer</a></dt>
+          <dd>
+            An interactive online decompiler which shows equivalent C-like
+            output of decompiled programs from many popular decompilers.
+            It's meant to be the reverse of the Compiler Explorer.
+          </dd>
+
+          <dt><a href="https://8bitworkshop.com">8bitworkshop</a></dt>
+          <dd>
+            IDE for old computers and video games. You can write code
+            for 6502 or Z80-based hardware in C, assembly, etc.
+          </dd>
+
+          <dt><a href="https://rextester.com/l/c_online_compiler_gcc">Rextester</a></dt>
+          <dd>
+            Simple platform for writing, sharing, compiling and executing code
+            directly in the web browser; with live cooperation for Patreons.
+          </dd>
+
+          <dt><a href="https://ideone.com/fork/48Y02N/">ideone.com</a></dt>
+          <dd>
+            A platform for compiling and executing source code online,
+            then sharing it publicly, secretly or privately.
+          </dd>
+
+          <dt><a href="https://binvis.io/">binvis.io</a></dt>
+          <dd>
+            Visual analysis of binary files
+          </dd>
+
+          <dt><a href="https://archive.org">Internet Archive</a></dt>
+          <dd>
+            A lot of valuable legacy of C on the World Wide Web would lost to time
+            had it not been for this archive. When some hyperlink we listed on this
+            homepage inevitably fails, try checking it on IA's Wayback Machine.
+          </dd>
+        </dl>
+      </details>
+    </article>
+    <article id="faq" class="details-list">
+      <h2>FAQ</h2>
+      <details> <!-- lingua franca? -->
+        <summary>What is "lingua franca"?</summary>
+        <p>
+        It is a widely language used for communication between individuals even
+        not native to it, thus also exerting an influence on the whole landscape.
+        For natural languages examples include Latin for medieval Europe, Chinese
+        for East Asia, or English for world trade today. Similarly, C has been
+        an inspiration for many other languages, and is the most common target
+        for <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFI</a>.
+        </p>
+      </details>
+      <details> <!-- logo? -->
+        <summary>What is the correct C logo?</summary>
+        <p class="anchor-no-color">
+        Traditionally the logo of C language is uppercase letter 'C' in font
+        <i>Helvetica Black</i> and color around
+        <i><a href="https://en.wikipedia.org/wiki/Cadet_grey">Cadet Grey</a></i>,
+        <i><a href="https://color-register.org/color/hit-grey">Hit Grey</a></i>
+        and <i><a href="https://encycolorpedia.com/b0c4de">LightSteelBlue</a></i>.<br>
+        As seen on the cover of <i>The C Programming Language</i> (K&amp;R).
+        </p>
+        <p>
+        The instance of the logo you see on this website was
+        <a href="https://commons.wikimedia.org/w/index.php?title=File:The_C_Programming_Language_logo.svg&oldid=724717272">uploaded to Wikimedia</a>
+        by <a href="https://commons.wikimedia.org/wiki/Special:Contributions/Cobaiahackers">Cobaiahackers</a> on <time>2023-01-12</time>.
+        </p>
+      </details>
+      <details> <!-- FAQ vs c-faq.org? -->
+        <summary>Isn't this FAQ missing content?</summary>
+        <p>
+        Yes and no.
+        </p>
+        <p>
+        There already are great FAQ lists (see <a href="#resources">resources</a>)
+        driven by community, like famous <a href="https://c-faq.com/">clc FAQ</a>.
+        <br>
+        The committee also already has
+        <a href="https://www.open-std.org/jtc1/sc22/wg14/www/projects#DRs">Change and Clarification Requests</a>
+        documents.
+        </p>
+        <p>
+        This FAQ, rather than being a language reference, aims to answer simple
+        questions that don't really fit anywhere else.
+        </p>
+      </details>
+      <details> <!-- C++ superset? -->
+        <summary>Is C++ a superset of C?</summary>
+        <p>
+        Not really, C++ is a <b>fork</b> of C.
+        <br>
+        To be precise it forked around <span class="nobr">K&amp;R C</span>,
+        with C89, C90 and C95 merged almost fully, and truly started diverging
+        from "mainline" with C99 and <span class="nobr">C++98</span>.
+        <br>
+        That being said, it was never a strict superset, as there always
+        was valid C that would be invalid or differently behaving C++.
+        <br>
+        You can read the following for more information:
+        </p>
+        <ul>
+          <li><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3065.pdf">C xor C++ Programming</a> (WG14: N3065; WG21: P2735R0)</li>
+          <li><a href="https://mcla.ug/blog/cpp-is-not-a-superset-of-c.html">C++ is not a superset of C</a></li>
+          <li><a href="https://jorenar.com/blog/c-xor-cpp">C++ is a superset of only a subset of C</a></li>
+          <li><a href="http://david.tribble.com/text/cdiffs.htm">Incompatibilities Between ISO C and ISO C++</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Compatibility_of_C_and_C%2B%2B">Compatibility of C and C++ - Wikipedia</a></li>
+          <li><a href="https://faehnri.ch/how-c-is-not-a-subset-of-cpp/">How C is not a subset of C++</a></li>
+          <li><a href="https://stackoverflow.com/q/1201593/10247460">Where is C not a subset of C++? - Stack Overflow</a></li>
+          <li><a href="https://stackoverflow.com/a/31505447/10247460">Does C++ contain the entire C language? - Stack Overflow</a></li>
+          <li><a href="https://isocpp.org/files/papers/N4860.pdf#section.C.5">N4860 (draft of C++20); Annex C (Compatibility), §C.5 (C++ and ISO C)</a></li>
+          <li><a href="https://youtu.be/s3Cv0-U5bXc">C++ is NOT a superset of C: tentative definitions, implicit conversions, implicit declarations &amp;more</a></li>
+          <li><a href="https://www.stroustrup.com/3rd_compat.pdf">The C++ Programming Language, Special Edition; Appendix B - Compatibility</a></li>
+          <li><a href="https://github.com/mono/mono/issues/10085">mono/mono#10085 - C/C++ incompatibilities</a></li>
+        </ul>
+      </details>
+      <details> <!-- C18? -->
+        <summary>What is C18?</summary>
+        <p>
+        "C18" is a misnomer caused by the late publication of the C17 making the
+        official long name of the standard <i>ISO/IEC&nbsp;9899:20<b>18</b></i>.
+        </p>
+        <p>
+        Similarly, ISO/IEC 9899:2024 should be referred to as "C23".
+        </p>
+      </details>
+      <details> <!-- C95? -->
+        <summary>Shouldn't C95 be "C94"?</summary>
+        <p>
+        There are even documents referring to it as "C93", but seems community
+        settled on "C95".
+        </p>
+      </details>
+    </article>
+    <article id="contact">
+      <h2>Contact</h2>
+      <h3>Homepage</h3>
+      Want to share ...
+      <ul style="margin-top:0">
+        <li>an interesting resource?</li>
+        <li>a useful tool?</li>
+        <li>a thriving community?</li>
+        <li>a suggestion for the website?</li>
+      </ul>
+
+      Great! Send us an e-mail to <a href="mailto:webmaster@c-language.org">webmaster@c-language.org</a>
+
+      <h3>Committee</h3>
+      <ul>
+        <li>
+          Contact information to <b>Office Holders</b> can be found on the
+          <a href="https://www.open-std.org/JTC1/SC22/WG14/www/contacts.html">contacts</a> page on the committee's website.
+        </li>
+        <li>
+          If you want to make a <b>proposal</b> see <a href="https://www.open-std.org/jtc1/sc22/wg14/www/contributing">contributing</a> page on the committee's website.
+        </li>
+      </ul>
+    </article>
+  </main>
+  <script defer>
+    if (!window.location.hash) {
+      window.location.replace(window.location
+        + '#' + document.querySelector('main article:first-of-type').id
+      );
+    }
+    window.onhashchange = function() {
+      let hash = window.location.hash;
+      if (hash === "#home") { hash = ''; }
+      document.title = document.title.split(' #')[0] + hash.replace('#', ' # ');
+    };
+    window.onhashchange();
+  </script>
+</body>
+</html>
