@@ -38,7 +38,7 @@
 
     <!-- <div class="copyleft"></div> -->
   </nav>
-  <main>
+  <main {%if page.title %}class="dropdown-list"{% endif %}>
     {%if page.title %}<h2>{{ page.title }}</h2>{% endif %}
     {{ content }}
   </main>

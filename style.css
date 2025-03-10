@@ -154,21 +154,21 @@ x-cmt::after {
 }
 
 
-.details-list > details {
+.dropdown-list > details {
   font-size: 0.95em;
   margin-left: 0.5em;
 }
 
-.details-list > details > details {
+.dropdown-list > details > details {
   margin-left: 1em;
 }
 
-.details-list > details > summary,
-.details-list > details > details > summary {
+.dropdown-list > details > summary,
+.dropdown-list > details > details > summary {
   font-size: 1.2em;
 }
 
-.details-list > details li {
+.dropdown-list > details li {
   margin-top: 0.1em;
 }
 
