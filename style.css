@@ -49,10 +49,6 @@ a:hover {
   filter: brightness(1.3);
 }
 
-main {
-  text-wrap: balance;
-}
-
 caption {
   font-weight: bold;
 }
@@ -160,9 +156,6 @@ x-cmt::after {
 
 .details-list > details {
   font-size: 0.95em;
-}
-
-.details-list > details {
   margin-left: 0.5em;
 }
 
