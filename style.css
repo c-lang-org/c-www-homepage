@@ -208,16 +208,23 @@ x-cmt::after {
   padding-top: 0;
 }
 
+
+.copyleft {
+  opacity: 0.7;
+  margin-top: 1em;
+}
+
+.copyleft > a {
+  display: block;
+  font-size: 0.75em;
+  margin-top: -0.3em;
+}
+
 .copyleft::before {
   content: "\00a9";
   display: inline-block;
   transform: scaleX(-1);
-  margin-right: 0.1em;
-}
-
-.copyleft {
-  opacity: 0.6;
-  font-size: 0.9em;
+  line-height: 1;
 }
 
 
@@ -353,5 +360,9 @@ table.revisions td time {
     width: 100%;
     overflow-y: auto;
     max-height: 60vh;
+  }
+
+  .copyleft > a {
+    font-size: 0.9em;
   }
 }
