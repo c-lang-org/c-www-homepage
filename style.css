@@ -280,7 +280,6 @@ table.revisions {
 table.revisions td {
   border-radius: 10px;
   padding: 0.3em;
-  text-wrap: nowrap;
 }
 
 table.revisions td:first-of-type {
