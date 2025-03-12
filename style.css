@@ -154,21 +154,21 @@ x-cmt::after {
 }
 
 
-.dropdown-list > details {
+.accordion-list > details {
   font-size: 0.95em;
   margin-left: 0.5em;
 }
 
-.dropdown-list > details > details {
+.accordion-list > details > details {
   margin-left: 1em;
 }
 
-.dropdown-list > details > summary,
-.dropdown-list > details > details > summary {
+.accordion-list > details > summary,
+.accordion-list > details > details > summary {
   font-size: 1.2em;
 }
 
-.dropdown-list > details li {
+.accordion-list > details li {
   margin-top: 0.1em;
 }
 
