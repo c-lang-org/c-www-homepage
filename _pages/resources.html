@@ -5,7 +5,7 @@ permalink: /resources
 accordion_list: true
 ---
 
-<details> <!-- books -->
+<details id="books">
   <summary>books</summary>
   <ul>
     <li class="book"> <!-- Beej's Guide to Network Programming -->
@@ -54,14 +54,21 @@ accordion_list: true
     </li>
   </ul>
 </details>
-<details> <!-- contests -->
+<details id="contests">
   <summary>contests</summary>
   <ul>
     <li><a href="https://www.ioccc.org/">The International Obfuscated C Code Contest</a></li>
     <li><a href="http://www.underhanded-c.org/">The Underhanded C Contest</a></li>
   </ul>
 </details>
-<details> <!-- humour, art -->
+<details id="guidelines">
+  <summary>guidelines</summary>
+  <ul>
+    <li><a href="https://misra.org.uk/">MISRA C</a></li>
+    <li><a href="https://wiki.sei.cmu.edu/confluence/display/c">SEI CERT C Coding Standard</a></li>
+  </ul>
+</details>
+<details id="humour-art">
   <summary>humour, art</summary>
   <ul>
     <li><a href="http://www.torek.net/torek/c/silliness.html"><i>Bits in the C</i> poem</a></li>
@@ -76,7 +83,7 @@ accordion_list: true
     <li><a href="https://www.youtube.com/watch?v=1S1fISh-pag"><i>Write in C</i> song</a></li>
   </ul>
 </details>
-<details> <!-- journals, zines -->
+<details id="journals">
   <summary>journals, zines</summary>
   <ul>
     <li><a href="https://accu.org/journals/nonmembers/cvu_issue_neutered/">C Vu</a></li>
@@ -86,14 +93,14 @@ accordion_list: true
     <li><a href="http://jclt.iecc.com/">The Journal of C Language Translation</a></li>
   </ul>
 </details>
-<details> <!-- derivative standards -->
+<details id="derivatives">
   <summary>derivative standards</summary>
   <ul>
     <li><a href="https://standards.iso.org/ittf/PubliclyAvailableStandards/c051126_ISO_IEC_TR_18037_2008.zip">ISO/IEC TR 18037:2008</a> <x-cmt>Embedded C</x-cmt></li>
     <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/">POSIX C</a></li>
   </ul>
 </details>
-<details> <!-- discussions, Q&A -->
+<details id="discussions">
   <summary>discussions, Q&amp;A</summary>
   <ul>
     <li><a href="https://www.reddit.com/r/C_Programming/comments/1hddvwd">Are there three types of array memory allocation?</a></li>
@@ -108,7 +115,7 @@ accordion_list: true
     <!-- TODO -->
   </ul>
 </details>
-<details> <!-- papers, articles -->
+<details id="articles">
   <summary>papers, articles</summary>
   <ul style="text-wrap:nowrap">
     <li><a href="https://homes.cs.washington.edu/~mernst/pubs/c-preprocessor-tse2002-abstract.html">An empirical analysis of C preprocessor use</a></li>
@@ -131,7 +138,7 @@ accordion_list: true
     <li><a href="https://lwn.net/Articles/250967/">What every programmer should know about memory, Part 1</a></li>
   </ul>
 </details>
-<details> <!-- revisions, history -->
+<details id="revisions">
   <summary>revisions, history</summary>
   <div style="font-size:0.95em">
     <ul>
@@ -228,14 +235,7 @@ accordion_list: true
     </li>
   </ul>
 </details>
-<details> <!-- standards, guidelines -->
-  <summary>standards, guidelines</summary>
-  <ul>
-    <li><a href="https://misra.org.uk/">MISRA C</a></li>
-    <li><a href="https://wiki.sei.cmu.edu/confluence/display/c">SEI CERT C Coding Standard</a></li>
-  </ul>
-</details>
-<details> <!-- tutorials, courses -->
+<details id="tutorials">
   <summary>tutorials, courses</summary>
   <ul style="text-wrap:nowrap">
     <li><a href="https://nrk.neocities.org/articles/c-static-analyzers">A gentle introduction to static analyzers for C</a></li>
@@ -249,7 +249,7 @@ accordion_list: true
     <!-- TODO <li><a href="https://www.learntosolveit.com/">Learn To Solve It</a></li> -->
   </ul>
 </details>
-<details> <!-- videos, lectures -->
+<details id="videos">
   <summary>videos, lectures</summary>
   <ul>
     <li><a href="https://www.youtube.com/watch?v=de2Hsvxaf8M">"C" Programming Language: Brian Kernighan - Computerphile</a></li>
@@ -263,7 +263,7 @@ accordion_list: true
     <li><a href="https://www.youtube.com/watch?v=ci1PJexnfNE">Why C is so Influential - Computerphile</a></li>
   </ul>
 </details>
-<details> <!-- webpages, blogs -->
+<details id="webpages">
   <summary>webpages, blogs</summary>
   <ul>
     <li><a href="https://abstractexpr.com/">Abstract Expression</a></li>
@@ -283,7 +283,7 @@ accordion_list: true
     <!-- <li><a href="http://c-lang.org/">C言語</a></li> -->
   </ul>
 </details>
-<details> <!-- wikis, references -->
+<details id="wikis-refs">
   <summary>wikis, references</summary>
   <ul>
     <li><a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere?target=Template%3AC+programming+language&namespace=0&hidetrans=1">Articles</a> linking to <a href="https://en.wikipedia.org/wiki/Template:C_programming_language">Template:C programming language</a> on Wikipedia</li>
@@ -300,7 +300,7 @@ accordion_list: true
 </details>
 
 <h3>More lists of ...</h3>
-<details> <!-- books -->
+<details id="more-books">
   <summary>books</summary>
   <ul>
     <li><a href="https://accu.org/reviews/by_rating/">ACCU : book reviews</a></li>
@@ -308,13 +308,13 @@ accordion_list: true
     <li><a href="https://www.cprogramming.com/books/c.html">Recommended C Programming Books - Cprogramming.com</a></li>
   </ul>
 </details>
-<details> <!-- libraries -->
+<details id="more-libs">
   <summary>libraries</summary>
   <ul>
     <li><a href="https://en.cppreference.com/w/c/links/libs">A list of open source C libraries - cppreference.com</a></li>
   </ul>
 </details>
-<details> <!-- Q&A, FAQ -->
+<details id="more-faq">
   <summary>Q&amp;A, FAQ</summary>
   <ul>
     <li><a href="https://www.iso-9899.info/wiki/C_gotchas">C gotchas - Wiki of #C on Libera</a></li>
@@ -327,9 +327,9 @@ accordion_list: true
     <li><a href="https://web.archive.org/web/20181215222738/http://www.comeaucomputing.com/techtalk/c99/">Tech Talk About C99 / Comeau C99 FAQ</a></li>
   </ul>
 </details>
-<details open> <!-- tools -->
+<details id="more-tools" open>
   <summary>tools</summary>
-  <details> <!-- compilers -->
+  <details id="more-tools-compilers">
     <summary>compilers</summary>
     <ul>
       <li><a href="https://github.com/BaseMax/AwesomeCompiler?tab=readme-ov-file#c">BaseMax/AwesomeCompiler - GitHub</a></li>
@@ -345,7 +345,7 @@ accordion_list: true
       <li><a href="https://www.reddit.com/r/Cprog/comments/4egaog/small_lesser_known_c_compilers_a_list/">Small, lesser known C compilers - a list : r/Cprog</a></li>
     </ul>
   </details>
-  <details> <!-- linters -->
+  <details id="more-tools-linters">
     <summary>linters, analyzers</summary>
     <ul>
       <li><a href="https://analysis-tools.dev/tools?languages=c">analysis-tools.dev</a></li>
@@ -354,7 +354,7 @@ accordion_list: true
       <li><a href="https://spinroot.com/static/">Static Analysis Tools for C Code - Spin</a></li>
     </ul>
   </details>
-  <details> <!-- reverse engineering -->
+  <details id="more-tools-reveng">
     <summary>reverse engineering</summary>
     <ul>
       <li><a href="https://decompilation.wiki/decompilers/directory/">Decompiler Directory - Decompilation Wiki</a></li>
@@ -363,7 +363,7 @@ accordion_list: true
       <li><a href="https://www.program-transformation.org/Transform/MachineCodeDecompilers.html">Program Transformation Wiki / Machine Code Decompilers</a></li>
     </ul>
   </details>
-  <details> <!-- misc. -->
+  <details id="more-tools-misc">
     <summary>misc.</summary>
     <ul>
       <li><a href="https://www.gnu.org/software/global/links.html">'Source code reading' related sites</a></li>
@@ -375,7 +375,7 @@ accordion_list: true
     </ul>
   </details>
 </details>
-<details open> <!-- misc. -->
+<details id="more-misc" open>
   <summary>misc.</summary>
   <ul>
     <li><a href="http://www.hal9k.com/cug/links/index1.htm">CUJ Source Links Index</a></li>

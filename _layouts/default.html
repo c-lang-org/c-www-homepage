@@ -44,5 +44,12 @@
     {%if page.title %}<h2>{{ page.title }}</h2>{% endif %}
     {{ content }}
   </main>
+  <script>
+    window.onhashchange = function() {
+      document.querySelectorAll('details:has(:target), details:target').forEach(d => { d.open = true });
+      document.querySelector(':target')?.scrollIntoView();
+    };
+    window.onhashchange();
+  </script>
 </body>
 </html>
