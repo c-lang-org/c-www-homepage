@@ -29,7 +29,7 @@ body {
   font-size: 20px;
   letter-spacing: 0.02em;
 
-  margin: 1em auto;
+  margin: 1em auto 3em;
   display: flex;
   max-width: 820px;
 
@@ -155,7 +155,7 @@ x-cmt::after {
 
 
 .accordion-list > details {
-  font-size: 0.95em;
+  font-size: 0.9em;
   margin-left: 0.5em;
 }
 
