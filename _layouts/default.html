@@ -49,7 +49,7 @@
       document.querySelectorAll('details:has(:target), details:target').forEach(d => { d.open = true });
       document.querySelector(':target')?.scrollIntoView();
     };
-    window.onhashchange();
+    window.onload = window.onhashchange;
   </script>
 </body>
 </html>
