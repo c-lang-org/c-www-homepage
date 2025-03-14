@@ -47,7 +47,7 @@
   <script>
     window.onhashchange = function() {
       document.querySelectorAll('details:has(:target), details:target').forEach(d => { d.open = true });
-      document.querySelector(':target')?.scrollIntoView();
+      window.scrollTo(0, document.querySelector(':target')?.offsetTop);
     };
     window.onload = window.onhashchange;
   </script>
