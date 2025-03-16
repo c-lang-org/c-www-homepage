@@ -46,8 +46,16 @@
   </main>
   <script>
     window.onhashchange = function() {
-      document.querySelectorAll('details:has(:target), details:target').forEach(d => { d.open = true });
-      window.scrollTo(0, document.querySelector(':target')?.offsetTop);
+      const t = document.querySelector(':target');
+      if (!t) { return; }
+
+      document.querySelectorAll('details:has(:target), details:target')
+        .forEach(d => { d.open = true });
+      window.scrollTo(0, t.offsetTop);
+
+      const f = t.tagName === "DETAILS" ? t.querySelector('summary') : t;
+      f.tabIndex = "-1";
+      f.focus();
     };
     window.onload = window.onhashchange;
   </script>
