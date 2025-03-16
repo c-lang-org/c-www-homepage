@@ -246,7 +246,7 @@ nav > header {
 nav > header img {
   width: 70%;
   height: 100%;
-  max-width: 10em;
+  max-width: 3em;
   filter: drop-shadow(0 0 1px var(--shadow-logo));
 }
 
