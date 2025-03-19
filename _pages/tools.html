@@ -5,12 +5,23 @@ permalink: /tools
 accordion_list: true
 ---
 
+<style>
+  x-cmt.see-also {
+    display: block;
+    text-align: right;
+  }
+  li.more {
+    background: transparent;
+  }
+</style>
+
 <x-cmt style="display:block; margin-bottom:0.5em">
   The below is but a <strong>tiny</strong> fraction of all existing tools
   for C development; while also incomplete, more utilities can be found on
   similar lists we link to in the <a href="/resources#more-tools">resources</a>.
 </x-cmt>
-<details> <!-- build automation -->
+
+<details id="building">
   <summary>build automation</summary>
   <ul class="tools-grid">
     <li><a href="https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html">Autotools</a> <!-- https://autotools.info --></li>
@@ -31,28 +42,38 @@ accordion_list: true
     <li><a href="https://xmake.io/">xmake</a></li>
   </ul>
 </details>
-<details> <!-- compilers -->
+<details id="compilers">
   <summary>compilers</summary>
+  <x-cmt class="see-also">see also: <a href="#ide-sdk">IDE/SDK</a></x-cmt>
   <ul class="tools-grid">
     <li><a href="https://www.amd.com/en/developer/aocc.html">AOCC</a></li>
     <li><a href="https://cc65.github.io/">cc65</a></li>
+    <li><a href="https://github.com/rui314/chibicc">chibicc</a></li>
     <li><a href="https://clang.llvm.org/">Clang</a></li>
     <li><a href="https://compcert.org/">CompCert</a></li>
+    <li><a href="https://sr.ht/~mcf/cproc/">cproc</a></li>
     <li><a href="https://digitalmars.com/download/freecompiler.html">Digital Mars</a></li>
     <li><a href="https://gcc.gnu.org/">GCC</a></li>
-    <li><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html">Intel® oneAPI <span class="nobr">DPC++/C++</span> Compiler</a></li>
+    <li><a href="https://www.ibm.com/products/c-and-c-plus-plus-compiler-family">IBM XL C/C++</a></li>
+    <li><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html">Intel oneAPI <span class="nobr">DPC++/C++</span></a></li>
     <li><a href="http://gsoc.cat-v.org/projects/kencc/">KenCC</a></li>
     <li><a href="https://drh.github.io/lcc/">lcc</a></li>
+    <li><a href="https://github.com/xoreaxeaxeax/movfuscator">M/o/Vfuscator</a></li>
+    <li><a href="https://developer.nvidia.com/hpc-compilers">Nvidia HPC Compilers</a></li>
     <li><a href="https://learn.microsoft.com/en-us/cpp/c-language">MSVC</a></li>
     <li><a href="https://web.archive.org/web/20231212090621/http://pcc.ludd.ltu.se/">Portable C Compiler</a></li>
+    <li><a href="https://ppci.readthedocs.io/">ppci</a></li>
     <li><a href="https://support.sas.com/en/software/sas-c-support.html">SAS/C</a></li>
     <li><a href="https://www.simple-cc.org/">SCC</a></li>
     <li><a href="https://sdcc.sourceforge.net/">SDCC</a></li>
+    <li><a href="http://www.tendra.org/">TenDRA</a></li>
+    <li><a href="https://www.ti.com/tool/TI-CGT">TI-CGT</a></li>
     <li><a href="https://bellard.org/tcc/">TinyCC</a></li>
-    <li><i>and more!</i></li>
+    <li><a href="https://z88dk.org/">z88dk</a></li>
+    <li class="more"><i>and <a href="https://www.c-language.org/resources#more-tools-compilers">more</a>!</i></li>
   </ul>
 </details>
-<details> <!-- debugging -->
+<details id="debug">
   <summary>debugging</summary>
   <ul class="tools-grid">
     <li><a href="https://github.com/csmith-project/creduce">C-Reduce</a></li>
@@ -70,7 +91,7 @@ accordion_list: true
     <li><a href="https://valgrind.org/">Valgrind</a></li>
   </ul>
 </details>
-<details> <!-- docs generators -->
+<details id="docs">
   <summary>docs generators</summary>
   <ul class="tools-grid">
     <li><a href="http://wwwmathlabo.univ-poitiers.fr/~maavl/CWEBx/">CWEBx</a></li>
@@ -78,44 +99,7 @@ accordion_list: true
     <li><a href="https://www.sphinx-doc.org">Sphinx</a></li>
   </ul>
 </details>
-<details> <!-- editors/IDEs -->
-  <summary>editors/IDEs</summary>
-  <ul class="tools-grid">
-    <li><a href="https://www.jetbrains.com/clion/">CLion</a></li>
-    <li><a href="https://www.codeblocks.org/">Code::Blocks</a></li>
-    <li><a href="https://codelite.org/">CodeLite</a></li>
-    <li><a href="https://coderunnerapp.com/">CodeRunner</a></li>
-    <li><a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME">CodeWarrior</a></li>
-    <li><a href="https://www.embarcadero.com/free-tools/dev-cpp">Dev-C++</a></li>
-    <li><a href="https://projects.eclipse.org/projects/tools.cdt">Eclipse CDT</a></li>
-    <li><a href="https://www.geany.org/">Geany</a></li>
-    <li><a href="https://www.adacore.com/gnatpro/toolsuite/gnatstudio">GNAT Studio</a></li>
-    <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a></li>
-    <li><a href="https://helix-editor.com/">Helix</a></li>
-    <li><a href="https://www.iar.com/">IAR Embedded Workbench</a></li>
-    <li><a href="https://kakoune.org/">Kakoune</a></li>
-    <li><a href="https://kate-editor.org/">Kate</a></li>
-    <li><a href="https://kdevelop.org/">KDevelop</a></li>
-    <li><a href="https://www.keil.com/">Keil μVision</a></li>
-    <li><a href="http://ni.com/cvi" class="nobr">LabWindows/CVI</a></li>
-    <li><a href="https://neovim.io/">Neovim</a></li>
-    <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
-    <li><a href="https://openwatcom.org/">Open Watcom</a></li>
-    <li><a href="https://www.oracle.com/application-development/technologies/developerstudio.html">Oracle Developer Studio</a></li>
-    <li><a href="http://www.smorgasbordet.com/pellesc/">Pelles C</a></li>
-    <li><a href="https://www.segger.com/products/development-tools/embedded-studio/">SEGGER Embedded Studio</a></li>
-    <li><a href="https://www.slickedit.com/">SlickEdit</a></li>
-    <li><a href="https://www.sourceinsight.com/">Source Insight</a></li>
-    <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
-    <li><a href="https://www.vim.org/">Vim</a></li>
-    <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
-    <li><a href="https://code.visualstudio.com/">VS Code</a></li>
-    <li><a href="https://vscodium.com/">VSCodium</a></li>
-    <li><a href="https://developer.apple.com/xcode/">Xcode</a></li>
-    <li><i>and more!</i></li>
-  </ul>
-</details>
-<details> <!-- formatters -->
+<details id="formatters">
   <summary>formatters</summary>
   <ul class="tools-grid">
     <li><a href="https://astyle.sourceforge.net/">Artistic Style</a></li>
@@ -129,7 +113,54 @@ accordion_list: true
     <!-- TODO <li><a href="https://www.formatcode.com/code-formatter-cpp.htm">FormatCode</a></li> -->
   </ul>
 </details>
-<details> <!-- interpreters -->
+<details id="ide-pde">
+  <summary>IDE/PDE, text editors</summary>
+  <x-cmt class="see-also">see also: <a href="#ide-sdk">IDE/SDK</a></x-cmt>
+  <ul class="tools-grid">
+    <li><a href="https://codelite.org/">CodeLite</a></li>
+    <li><a href="https://coderunnerapp.com/">CodeRunner</a></li>
+    <li><a href="https://www.geany.org/">Geany</a></li>
+    <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a></li>
+    <li><a href="https://helix-editor.com/">Helix</a></li>
+    <li><a href="https://kakoune.org/">Kakoune</a></li>
+    <li><a href="https://kate-editor.org/">Kate</a></li>
+    <li><a href="https://neovim.io/">Neovim</a></li>
+    <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
+    <li><a href="https://www.slickedit.com/">SlickEdit</a></li>
+    <li><a href="https://www.sourceinsight.com/">Source Insight</a></li>
+    <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+    <li><a href="https://ex-vi.sourceforge.net/">vi</a></li>
+    <li><a href="https://www.vim.org/">Vim</a></li>
+    <li><a href="https://code.visualstudio.com/">VS Code</a></li>
+    <li><a href="https://vscodium.com/">VSCodium</a></li>
+    <li class="more"><i>and more!</i></li>
+  </ul>
+</details>
+<details id="ide-sdk">
+  <summary>IDE/SDK, toolchains</summary>
+  <x-cmt class="see-also">see also: <a href="#ide-pde">IDE/PDE</a></x-cmt>
+  <ul class="tools-grid">
+    <li><a href="https://www.jetbrains.com/clion/">CLion</a></li>
+    <li><a href="https://www.codeblocks.org/">Code::Blocks</a></li>
+    <li><a href="https://www.nxp.com/design/design-center/software/development-software/codewarrior-development-tools:CW_HOME">CodeWarrior</a></li>
+    <li><a href="https://www.embarcadero.com/free-tools/dev-cpp">Dev-C++</a></li>
+    <li><a href="https://projects.eclipse.org/projects/tools.cdt">Eclipse CDT</a></li>
+    <li><a href="https://www.adacore.com/gnatpro/toolsuite/gnatstudio">GNAT Studio</a></li>
+    <li><a href="https://www.iar.com/">IAR Embedded Workbench</a></li>
+    <li><a href="https://kdevelop.org/">KDevelop</a></li>
+    <li><a href="https://www.keil.com/">Keil μVision</a></li>
+    <li><a href="http://ni.com/cvi" class="nobr">LabWindows/CVI</a></li>
+    <li><a href="https://openwatcom.org/">Open Watcom</a></li>
+    <li><a href="https://www.oracle.com/application-development/technologies/developerstudio.html">Oracle Developer Studio</a></li>
+    <li><a href="http://www.smorgasbordet.com/pellesc/">Pelles C</a></li>
+    <li><a href="https://www.segger.com/products/development-tools/embedded-studio/">SEGGER Embedded Studio</a></li>
+    <li><a href="https://www.ti.com/tool/CCSTUDIO">TI CCSTUDIO</a></li>
+    <li><a href="https://visualstudio.microsoft.com/">Visual Studio</a></li>
+    <li><a href="https://developer.apple.com/xcode/">Xcode</a></li>
+    <li class="more"><i>and more!</i></li>
+  </ul>
+</details>
+<details id="interpreters">
   <summary>interpreters/REPL</summary>
   <ul class="tools-grid">
     <li><a href="https://github.com/hexagonal-sun/bic">BIC</a></li>
@@ -140,7 +171,7 @@ accordion_list: true
     <li><a href="https://gitlab.com/zsaleeba/picoc">PicoC</a></li>
   </ul>
 </details>
-<details> <!-- LSP servers -->
+<details id="lsp">
   <summary>LSP servers</summary>
   <ul class="tools-grid">
     <li><a href="https://github.com/MaskRay/ccls/wiki">ccls</a></li>
@@ -150,7 +181,7 @@ accordion_list: true
     <li><a href="https://github.com/swiftlang/sourcekit-lsp">SourceKit-LSP</a></li>
   </ul>
 </details>
-<details> <!-- linters, analyzers -->
+<details id="linters">
   <summary>linters, analyzers</summary>
   <ul class="tools-grid">
     <li><a href="https://www.astree.ens.fr/">Astrée</a></li>
@@ -171,7 +202,7 @@ accordion_list: true
     <li><a href="https://splint.org/">Splint</a></li>
   </ul>
 </details>
-<details> <!-- macro (pre)processors -->
+<details id="pre-processors">
   <summary>macro (pre)processors</summary>
   <ul class="tools-grid">
     <li>built-in cpp</li>
@@ -179,7 +210,7 @@ accordion_list: true
     <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/m4.html">m4</a></li>
   </ul>
 </details>
-<details> <!-- navigation, exploration -->
+<details id="exploration">
   <summary>navigation, exploration</summary>
   <ul class="tools-grid">
     <li><a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/cflow.html">cflow</a></li>
@@ -192,7 +223,7 @@ accordion_list: true
     <li><a href="https://ctags.io/">Universal Ctags</a></li>
   </ul>
 </details>
-<details> <!-- profiling, measures -->
+<details id="profiling">
   <summary>profiling, measures</summary>
   <ul class="tools-grid">
     <li><a href="https://invisible-island.net/atac/">atac</a></li>
@@ -201,7 +232,7 @@ accordion_list: true
     <li><a href="http://www.geonius.com/software/tools/npath.html">npath</a></li>
   </ul>
 </details>
-<details> <!-- package managers -->
+<details id="packages">
   <summary>package managers</summary>
   <ul class="tools-grid">
     <li><a href="https://buckaroo.pm/">Buckaroo</a></li>
@@ -218,7 +249,7 @@ accordion_list: true
     <li>package manager native to the OS</li>
   </ul>
 </details>
-<details> <!-- reverse engineering -->
+<details id="reveng">
   <summary>reverse engineering</summary>
   <ul class="tools-grid">
     <li><a href="https://angr.io/">angr</a></li>
@@ -234,14 +265,14 @@ accordion_list: true
     <li><a href="https://rev.ng/">rev.ng</a></li>
   </ul>
 </details>
-<details> <!-- transpilers -->
+<details id="transpilers">
   <summary>transpilers</summary>
   <ul class="tools-grid">
     <li><a href="https://github.com/libav/c99-to-c89">c99-to-c89</a></li>
     <li><a href="https://github.com/thradams/cake">Cake</a></li>
   </ul>
 </details>
-<details> <!-- misc. -->
+<details id="mics">
   <summary>misc.</summary>
   <ul class="tools-grid">
     <li><a href="https://ccache.dev/">Ccache</a></li>
@@ -276,7 +307,7 @@ accordion_list: true
     <dd>
       An interactive online decompiler that shows equivalent C-like
       output of decompiled programs from many popular decompilers.
-      It is meant to be the reverse of the Compiler Explorer.
+      Sort of a reverse of the Compiler Explorer.
     </dd>
 
     <dt><a href="https://8bitworkshop.com">8bitworkshop</a></dt>
