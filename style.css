@@ -194,6 +194,7 @@ x-cmt::after {
   display: grid;
   padding: 0.35em 0.1em;
   text-align: center;
+  text-wrap: balance;
 
   align-items: center;
   justify-content: center;
@@ -203,9 +204,13 @@ x-cmt::after {
   border-radius: 10px;
 }
 
-.tools-grid > li > aside {
-  font-size: 0.6em;
-  padding-top: 0;
+.tools-grid > li.more {
+  background: transparent;
+}
+
+.tools-grid x-cmt.see-also {
+  display: block;
+  text-align: right;
 }
 
 
