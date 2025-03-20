@@ -42,9 +42,14 @@
       {% endfor %}
     </div>
 
-    <div class="copyleft">
-      <a href="https://www.open-std.org/jtc1/sc22/wg14/">C Standards Committee</a>
-    </div>
+    <footer>
+      <div class="copyleft">
+        <a href="https://www.open-std.org/jtc1/sc22/wg14/">C Standards Committee</a>
+      </div>
+      <div style="font-size:0.8em">
+        Site design by <a href="https://jorenar.com/">Jorenar</a>
+      </div>
+    </footer>
   </nav>
   <main{%if page.accordion_list %} class="accordion-list"{% endif %}>
     {%if page.title %}<h2>{{ page.title }}</h2>{% endif %}

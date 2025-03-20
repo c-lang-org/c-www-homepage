@@ -219,14 +219,8 @@ x-cmt::after {
 }
 
 
-.copyleft {
-  opacity: 0.7;
-  margin-top: 1em;
-}
-
 .copyleft > a {
   display: block;
-  font-size: 0.75em;
   margin-top: -0.3em;
 }
 
@@ -235,6 +229,7 @@ x-cmt::after {
   display: inline-block;
   transform: scaleX(-1);
   line-height: 1;
+  font-size: 1.5em;
 }
 
 
@@ -285,6 +280,16 @@ nav > #menu + label + div a {
 
 nav a.current {
   color: var(--color-nav-target);
+}
+
+nav footer {
+  opacity: 0.8;
+  margin-top: 1.5em;
+  font-size: 0.7em;
+}
+
+nav footer > * {
+  margin-top: 1em;
 }
 
 
@@ -350,7 +355,7 @@ table.revisions td time {
     display: none;
   }
 
-  nav > div {
+  nav > div, nav > footer {
     display: none;
   }
 
@@ -365,14 +370,15 @@ table.revisions td time {
     transform: scale(0.9);
   }
 
-  nav #menu:checked ~ div {
+  nav #menu:checked ~ * {
     display: block;
     width: 100%;
     overflow-y: auto;
     max-height: 60vh;
   }
 
-  .copyleft > a {
-    font-size: 0.9em;
+  nav footer {
+    font-size: 0.8em;
+    margin-top: 0;
   }
 }
