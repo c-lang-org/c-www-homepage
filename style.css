@@ -357,6 +357,9 @@ table.revisions td time {
 
   nav > div, nav > footer {
     display: none;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 60vh;
   }
 
   nav #menu + label {
@@ -372,9 +375,6 @@ table.revisions td time {
 
   nav #menu:checked ~ * {
     display: block;
-    width: 100%;
-    overflow-y: auto;
-    max-height: 60vh;
   }
 
   nav footer {
