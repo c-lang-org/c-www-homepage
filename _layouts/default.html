@@ -25,6 +25,8 @@
 
   <link rel="shortcut icon" href="logo.svg">
   <link rel="stylesheet" href="style.css">
+
+  {% if page.head_custom %}{{ page.head_custom }}{% endif %}
 </head>
 <body>
   <nav>
