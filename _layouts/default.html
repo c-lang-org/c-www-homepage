@@ -52,10 +52,7 @@
       </div>
     </footer>
   </nav>
-  <main{%if page.accordion_list %} class="accordion-list"{% endif %}>
-    {%if page.title %}<h2>{{ page.title }}</h2>{% endif %}
-    {{ content }}
-  </main>
+{{ content }}
   <script>
     window.onhashchange = function() {
       const t = document.querySelector(':target');
