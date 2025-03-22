@@ -182,7 +182,7 @@ x-cmt::after {
 }
 
 .accordion-list > details li {
-  margin-top: 0.1em;
+  margin-top: 0.2em;
 }
 
 .accordion-list details > summary + x-cmt.see-also {
@@ -192,6 +192,7 @@ x-cmt::after {
 
 .accordion-list div.fold-btns {
   float: right;
+  margin-right: 10px;
 }
 
 
@@ -208,7 +209,6 @@ x-cmt::after {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(7em, auto));
   column-gap: 0.4em;
-  row-gap: 0.15em;
   list-style: none;
   padding-left: 0;
 }
