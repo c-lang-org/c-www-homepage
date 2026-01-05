@@ -18,7 +18,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/c-logo.svg',
-    siteTitle: 'The lingua franca of programming',
+    siteTitle: 'Programming Language',
     
     nav: [
       { text: 'Home', link: '/' },

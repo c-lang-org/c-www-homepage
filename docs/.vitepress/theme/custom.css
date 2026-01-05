@@ -145,13 +145,16 @@
 /* Revisions table */
 table.revisions {
   border-spacing: 0.5em 0.4em;
-  margin-top: 1.5em;
-  width: max-content;
+  margin: 1.5em auto 0;
+  width: 100%;
+  max-width: 1000px;
 }
 
 table.revisions caption {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.8em;
   font-weight: 600;
+  font-size: 1.1em;
+  text-align: center;
 }
 
 table.revisions td {
@@ -202,6 +205,37 @@ table.revisions td > a[title="ISBN"] {
 /* Home page hero adjustments */
 .VPHome {
   background-color: var(--vp-c-bg);
+}
+
+.VPHero {
+  padding-top: 140px !important;
+  padding-bottom: 96px !important;
+}
+
+.VPHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.VPFeatures {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: linear-gradient(to bottom, transparent 0%, var(--vp-c-bg-soft) 50%, transparent 100%);
+}
+
+.VPFeature .icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--vp-c-brand-1);
+}
+
+.VPFeature .icon svg {
+  width: 32px;
+  height: 32px;
 }
 
 .vp-doc h1, .vp-doc h2 {
