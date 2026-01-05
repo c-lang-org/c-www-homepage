@@ -2,7 +2,6 @@
 layout: home
 
 hero:
-  name: "C"
   text: "The C Programming Language"
   tagline: A general-purpose high-level programming language suitable for low-level programming - a system programming language.
   actions:
