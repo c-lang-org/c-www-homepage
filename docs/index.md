@@ -3,7 +3,7 @@ layout: home
 
 hero:
   text: "The C Programming Language"
-  tagline: A general-purpose high-level programming language suitable for low-level programming - a system programming language.
+  tagline: C is a general-purpose high-level programming language suitable for low-level programming, in other words&#58; a system programming language.
   actions:
     - theme: brand
       text: Get Started
