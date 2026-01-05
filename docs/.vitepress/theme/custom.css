@@ -1,0 +1,230 @@
+/* Custom styling for C programming language site */
+
+:root {
+  /* Light theme colors */
+  --vp-c-brand-1: #3c4cc4;
+  --vp-c-brand-2: #1473ad;
+  --vp-c-brand-3: #1e02dd;
+  
+  --vp-c-bg: #fff6ee;
+  --vp-c-bg-soft: #cec6f73d;
+  --vp-c-text-1: #3c4cc4;
+  --vp-c-text-2: #596fc5;
+  
+  --font-serif: "Times New Roman", "Times", "Liberation Serif", "FreeSerif", serif;
+  --font-mono: "Courier", "FreeMono", monospace;
+}
+
+.dark {
+  --vp-c-bg: #1c1b22;
+  --vp-c-bg-soft: #4a4a4a26;
+  --vp-c-text-1: #b0c4de;
+  --vp-c-brand-1: #82c7f2;
+  --vp-c-brand-2: #009fff;
+}
+
+/* Typography overrides */
+.vp-doc {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+.vp-doc code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+.vp-doc pre code {
+  font-size: 0.9em;
+}
+
+/* Custom elements */
+.x-cmt {
+  opacity: 0.7;
+  font-size: 0.8em;
+  padding: 0.2em;
+}
+
+.x-cmt::before {
+  content: '/* ';
+}
+
+.x-cmt::after {
+  content: ' */';
+}
+
+/* Utility classes */
+.nobr {
+  white-space: nowrap;
+}
+
+.anchor-no-color a {
+  color: inherit;
+}
+
+/* Details/summary styling */
+.vp-doc details {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  user-select: none;
+}
+
+.vp-doc summary:hover {
+  filter: brightness(1.3);
+}
+
+.vp-doc details > p {
+  margin: 0.5em 1.5em;
+  margin-right: 0;
+}
+
+/* YouTube video container */
+.yt-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.yt-video {
+  height: 100%;
+  position: absolute;
+  border: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Book listings */
+.book {
+  margin-bottom: 0.3em;
+}
+
+.book i {
+  display: block;
+}
+
+/* Tools grid */
+.tools-grid {
+  margin: 0.5em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7em, auto));
+  column-gap: 0.4em;
+  row-gap: 0.4em;
+  list-style: none;
+  padding-left: 0;
+}
+
+.tools-grid > li {
+  display: grid;
+  padding: 0.35em 0.1em;
+  text-align: center;
+  text-wrap: balance;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--vp-c-bg-soft);
+  border-radius: 10px;
+}
+
+.tools-grid > li.more {
+  background: transparent;
+}
+
+/* Revisions table */
+table.revisions {
+  border-spacing: 0.2em;
+  margin-top: 1.5em;
+  width: max-content;
+}
+
+table.revisions td {
+  border-radius: 10px;
+  padding: 0.3em;
+}
+
+table.revisions td:first-of-type {
+  font-weight: bold;
+  text-align: center;
+}
+
+table.revisions td:not(:empty) {
+  background: var(--vp-c-bg-soft);
+}
+
+table.revisions td time {
+  display: block;
+  font-size: 0.7em;
+}
+
+table.revisions td > a[title="ISBN"] {
+  font-size: 0.75em;
+  letter-spacing: 0;
+  transform: scaleY(1.15);
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+/* Copyleft symbol */
+.copyleft > a {
+  display: block;
+  margin-top: -0.3em;
+}
+
+.copyleft::before {
+  content: "\00a9";
+  display: inline-block;
+  transform: scaleX(-1);
+  line-height: 1;
+  font-size: 1.5em;
+}
+
+/* Home page hero adjustments */
+.VPHome {
+  background-color: var(--vp-c-bg);
+}
+
+.vp-doc h1, .vp-doc h2 {
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 0.3em;
+}
+
+/* Accordion list styles */
+.accordion-list > details {
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+.accordion-list > details > details {
+  margin-left: 1em;
+}
+
+.accordion-list > details > summary,
+.accordion-list > details > details > summary {
+  font-size: 1.2em;
+}
+
+.accordion-list details > summary + x-cmt.see-also {
+  display: block;
+  text-align: right;
+}
+
+/* Code block styling */
+.vp-doc pre {
+  margin-left: 1em;
+}
+
+/* Paragraph spacing */
+.vp-doc p + p {
+  margin-top: 0.5em;
+}

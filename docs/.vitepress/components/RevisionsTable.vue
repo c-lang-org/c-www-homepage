@@ -1,0 +1,126 @@
+<template>
+  <table class="revisions">
+    <caption>Revisions of the C standard</caption>
+    <tbody>
+      <tr>
+        <td>C23</td>
+        <td>ISO/IEC 9899:2024</td>
+        <td>
+          <a href="https://www.iso.org/standard/82075.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/102886">IEC</a>
+          <time>2024-10-31</time>
+        </td>
+        <td>
+          <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf">N3220</a>
+          <time>2024-02-22</time>
+        </td>
+      </tr>
+      <tr>
+        <td>C17</td>
+        <td>ISO/IEC 9899:2018</td>
+        <td>
+          <a href="https://www.iso.org/standard/74528.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/63478">IEC</a>
+          <time>2018-07-05</time>
+        </td>
+        <td>
+          <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2310.pdf">N2310</a>
+          <time>2018-11-11</time>
+        </td>
+      </tr>
+      <tr>
+        <td>C11</td>
+        <td>ISO/IEC 9899:2011</td>
+        <td>
+          <a href="https://www.iso.org/standard/57853.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/11916">IEC</a>
+          <time>2011-12-08</time>
+        </td>
+        <td>
+          <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">N1570</a>
+          <time>2011-04-04</time>
+        </td>
+      </tr>
+      <tr>
+        <td>C99</td>
+        <td>ISO/IEC 9899:1999</td>
+        <td>
+          <a href="https://www.iso.org/standard/29237.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/21714">IEC</a>
+          <time>1999-12-16</time>
+        </td>
+        <td title="C99 + TC1,TC2,TC3">
+          <a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">N1256</a>
+          <time>2007-09-07</time>
+        </td>
+      </tr>
+      <tr>
+        <td>C95</td>
+        <td>ISO/IEC 9899:1990<br><span style="float:right">/Amd 1:1995</span></td>
+        <td>
+          <a href="https://www.iso.org/standard/23909.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/21710">IEC</a>
+          <time>1995-03-30</time>
+        </td>
+        <td>
+          <span><a href="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n325.pdf">N325</a></span>
+          <time>1994-02-10</time>
+        </td>
+      </tr>
+      <tr>
+        <td>C90</td>
+        <td>ISO/IEC 9899:1990</td>
+        <td>
+          <a href="https://www.iso.org/standard/17782.html">ISO</a>
+          /
+          <a href="https://webstore.iec.ch/en/publication/21711">IEC</a>
+          <time>1990-12-20</time>
+        </td>
+        <td rowspan="2">
+          <span>N119</span>
+          <time>1990-06-18</time>
+        </td>
+      </tr>
+      <tr>
+        <td title="ANSI C">C89</td>
+        <td>ANSI X3.159-1989</td>
+        <td>
+          <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/FIPS/fipspub160.pdf" style="font-size:0.8em;letter-spacing:-0.05em">FiPS PUB 160</a>
+          <time>1989-12-04</time>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-size:0.9em;letter-spacing:-0.1em" title="K&amp;R C">K&amp;R</td>
+        <td style="font-size:0.9em;text-align:center"><i>The C Programming<br>Language</i></td>
+        <td>
+          <a title="ISBN" href="https://en.wikipedia.org/wiki/Special:BookSources?isbn=0131101633">0-13-110163-3</a>
+          <time>1978-02-22</time>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin:0.5em;font-size:0.85em">
+    See also:
+    <ul style="margin:0">
+      <li>
+        <a href="/resources#revisions"><b style="opacity:0.85">resources</b></a>
+        page listing alternative documents, and other additional materials;
+      </li>
+      <li>
+        <a href="https://www.open-std.org/jtc1/sc22/wg14/www/projects.html#9899">analogous table</a>
+        on committee's website (includes draft for upcoming revision).
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script setup lang="ts">
+// C standards revisions table component
+</script>
