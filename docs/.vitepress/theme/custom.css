@@ -2,14 +2,14 @@
 
 :root {
   /* Light theme colors */
-  --vp-c-brand-1: #3c4cc4;
-  --vp-c-brand-2: #1473ad;
-  --vp-c-brand-3: #1e02dd;
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #1e40af;
   
-  --vp-c-bg: #fff6ee;
-  --vp-c-bg-soft: #cec6f73d;
-  --vp-c-text-1: #3c4cc4;
-  --vp-c-text-2: #596fc5;
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f1f5f9;
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #475569;
   
   --font-serif: "Times New Roman", "Times", "Liberation Serif", "FreeSerif", serif;
   --font-mono: "Courier", "FreeMono", monospace;
