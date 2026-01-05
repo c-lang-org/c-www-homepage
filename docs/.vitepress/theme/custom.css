@@ -143,19 +143,26 @@
 
 /* Revisions table */
 table.revisions {
-  border-spacing: 0.2em;
+  border-spacing: 0.5em 0.4em;
   margin-top: 1.5em;
   width: max-content;
 }
 
+table.revisions caption {
+  margin-bottom: 0.6em;
+  font-weight: 600;
+}
+
 table.revisions td {
   border-radius: 10px;
-  padding: 0.3em;
+  padding: 0.6em 0.8em;
+  line-height: 1.6;
 }
 
 table.revisions td:first-of-type {
   font-weight: bold;
   text-align: center;
+  padding: 0.6em 1em;
 }
 
 table.revisions td:not(:empty) {
@@ -164,7 +171,9 @@ table.revisions td:not(:empty) {
 
 table.revisions td time {
   display: block;
-  font-size: 0.7em;
+  font-size: 0.75em;
+  margin-top: 0.3em;
+  opacity: 0.8;
 }
 
 table.revisions td > a[title="ISBN"] {
