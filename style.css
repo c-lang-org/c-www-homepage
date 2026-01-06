@@ -305,6 +305,10 @@ nav footer > * {
   margin-top: 1em;
 }
 
+nav footer img[src*="vim"] {
+  opacity: 0.2;
+}
+
 
 table.revisions {
   border-spacing: 0.2em;
@@ -393,5 +397,9 @@ table.revisions td time {
   nav footer {
     font-size: 0.8em;
     margin-top: 0;
+  }
+
+  nav footer img[src*="vim"] {
+    display: none;
   }
 }
