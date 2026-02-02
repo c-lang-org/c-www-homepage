@@ -340,7 +340,7 @@ table.revisions td time {
   display: none;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and ((max-width: 450px) or (max-height: 600px)) {
   body {
     display: block;
     font-size: 0.95em;
